@@ -71,7 +71,7 @@ img { display: block; max-width: 100%; }
 .tick-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .tick { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; padding: 12px; border: 1px solid var(--line); cursor: pointer; }
 .tick.single { margin-bottom: 8px; }
-.calc-figure { margin: 0; position: sticky; top: 28px; min-width: 0; background: #f0f2e8; padding: 14px 0 20px; }
+.calc-figure { margin: 0; position: sticky; top: 164px; min-width: 0; background: #f0f2e8; padding: 14px 0 20px; }
 .calc-figure img { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: contain; }
 .calc-figure figcaption { text-align: center; font-size: 10px; letter-spacing: .04em; color: #67745d; }
 .calc-icon-panel { display: grid; place-items: center; min-height: 205px; background: #f0f2e8; padding: 30px 14px; }
