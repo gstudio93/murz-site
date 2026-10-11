@@ -21,7 +21,7 @@ img { display: block; max-width: 100%; }
 .calc-hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 12px; }
 .calc-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .16em; margin: 0 0 28px; }
 .calc-hero h1 { max-width: 720px; font-size: clamp(42px, 5.6vw, 84px); font-weight: 500; line-height: 1.04; letter-spacing: -.065em; margin: 0 0 25px; }
-.calc-hero h1 em { font-family: Georgia, serif; font-weight: 400; }
+.calc-hero h1 em { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; }
 .calc-hero-copy > p:not(.calc-eyebrow) { max-width: 490px; color: #5b6d5f; font-size: 15px; }
 .calc-hero-copy > a { display: inline-flex; align-items: center; gap: 44px; background: var(--dark); color: #f6f4ef; padding: 15px 22px; margin-top: 18px; font-size: 13px; }
 .calc-hero-copy > a span { color: var(--lime); }
