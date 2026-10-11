@@ -5,13 +5,12 @@ const empty = { area: 60, rooms: 5, bathrooms: 1, height: 2.7, plaster: 0, ceili
 test('no selected work produces zero, without fixed unexplained charges', () => {
   assert.equal(calculateRenovation(empty).total, 0);
 });
-test('60 m² stretch ceiling: 90,000 base + 15% reserve + 35% materials', () => {
+test('60 m² stretch ceiling: 90,000 work + 35% materials, without reserve', () => {
   const result = calculateRenovation({ ...empty, ceiling: 'stretch' });
   assert.equal(result.sections[0].amount, 90000);
-  assert.equal(result.reserve, 13500);
-  assert.equal(result.work, 103500);
-  assert.equal(result.materials, 36225);
-  assert.equal(result.total, 139725);
+  assert.equal(result.work, 90000);
+  assert.equal(result.materials, 31500);
+  assert.equal(result.total, 121500);
 });
 test('ceiling and electric selections change their own subtotals', () => {
   const result = calculateRenovation({ ...empty, ceiling: 'painted', electric: 'new' });
@@ -37,7 +36,7 @@ test('small/large apartments, all room counts and heights yield finite consisten
     const result = calculateRenovation({ ...empty, area, rooms, bathrooms, height, wallLevel: 'full', wallFinish: 'paint', floorFinish: 'parquet' });
     assert.ok(Number.isFinite(result.total) && result.total >= 0);
     assert.equal(result.total, result.work + result.materials);
-    assert.equal(result.work, result.sections.reduce((sum, item) => sum + item.amount, 0) + result.reserve);
+    assert.equal(result.work, result.sections.reduce((sum, item) => sum + item.amount, 0));
   }
 });
 test('invalid geometry cannot return a misleading price', () => {

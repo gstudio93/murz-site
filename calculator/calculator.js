@@ -38,7 +38,7 @@
       document.querySelector('#summary-work').textContent = rubles(result.work);
       document.querySelector('#summary-materials').textContent = rubles(result.materials);
       document.querySelector('#summary-selection').textContent = `${values.area.toLocaleString('ru-RU')} м² · помещений: ${values.rooms} · санузлов: ${values.bathrooms} · потолки: ${values.height.toLocaleString('ru-RU')} м`;
-      const rows = [...result.sections, { label: 'Резерв 15%', amount: result.reserve }];
+      const rows = result.sections;
       const breakdown = document.querySelector('#summary-breakdown');
       breakdown.replaceChildren(...rows.map(item => {
         const row = document.createElement('div');
@@ -69,7 +69,7 @@
       const choices = [...section.querySelectorAll('input:checked')].map(input => input.closest('label').querySelector('strong, span').textContent.trim());
       lines.push(`${section.querySelector('h2').textContent}: ${choices.join('; ') || 'Без работ'}`);
     });
-    lines.push('', ...result.sections.map(item => `${item.label}: ${rubles(item.amount)}`), `Резерв 15%: ${rubles(result.reserve)}`, `Работы с резервом: ${rubles(result.work)}`, `Черновые материалы (35%): ${rubles(result.materials)}`, `Итого: ${rubles(result.total)}`, '', 'Объёмы поверхностей приблизительные. Комплект натяжного потолка включён в расценку. Остальные чистовые материалы, мебель и техника не учтены. Итоговая смета — после замера.', 'MURZ: +7 (928) 000-11-10');
+    lines.push('', ...result.sections.map(item => `${item.label}: ${rubles(item.amount)}`), `Работы: ${rubles(result.work)}`, `Черновые материалы (35%): ${rubles(result.materials)}`, `Итого: ${rubles(result.total)}`, '', 'Объёмы поверхностей приблизительные. Комплект натяжного потолка включён в расценку. Остальные чистовые материалы, мебель и техника не учтены. Итоговая смета — после замера.', 'MURZ: +7 (928) 000-11-10');
     return lines.join('\n');
   }
 

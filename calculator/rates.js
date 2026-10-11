@@ -13,7 +13,6 @@ const MURZ_RATES = Object.freeze({
   floorTile: { standard: 3000, large: 3600, none: 0 },
   electric: { partial: 900, expanded: 1250, new: 1750, none: 0 },
   plumbing: { pipes: [0, 37600, 47000], equipment: [0, 26000, 32000] },
-  reserve: 0.15,
   materials: 0.35,
 });
 
@@ -63,10 +62,9 @@ function calculateRenovation(p, rates = MURZ_RATES) {
   ].map(item => ({ ...item, amount: Math.round(item.amount) }));
   if (sections.some(item => !Number.isFinite(item.amount))) throw new RangeError('Неизвестный вариант работ.');
   const base = sections.reduce((sum, item) => sum + item.amount, 0);
-  const reserve = Math.round(base * rates.reserve);
-  const work = base + reserve;
+  const work = base;
   const materials = Math.round(work * rates.materials);
-  return { sections, reserve, work, materials, total: work + materials };
+  return { sections, work, materials, total: work + materials };
 }
 
 if (typeof module !== 'undefined') module.exports = { MURZ_RATES, calculateRenovation };
