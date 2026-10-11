@@ -51,6 +51,10 @@ html { scroll-padding-top: 20px; }
 .site-header .desktop-nav a { font-size: 11px; font-weight: 600; letter-spacing: .075em; text-transform: uppercase; white-space: nowrap; transition: color .2s ease; }
 .site-header .desktop-nav a:hover, .site-header .desktop-nav a:focus-visible { color: var(--lime); }
 .site-header .menu-toggle { display: none; }
+@media (min-width: 761px) {
+  html { scroll-padding-top: 154px; }
+  .site-header { position: sticky; top: 0; z-index: 50; box-shadow: 0 4px 14px #18241c12; }
+}
 
 .hero { position: relative; display: block; min-height: min(750px, 78vw); padding: 0; isolation: isolate; background: #697166; color: #fff; }
 .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 58%; z-index: -2; }
