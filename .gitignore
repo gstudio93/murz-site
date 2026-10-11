@@ -1,0 +1,17 @@
+# Local preview server and tunnel helpers
+preview-server.js
+start-preview.ps1
+stop-preview.ps1
+sync-preview.ps1
+
+# Internal working files and original, unused image exports
+review/
+tools/
+brand-assets/
+images/*.png
+
+# OS/editor files
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
