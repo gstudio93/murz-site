@@ -69,7 +69,7 @@
       const choices = [...section.querySelectorAll('input:checked')].map(input => input.closest('label').querySelector('strong, span').textContent.trim());
       lines.push(`${section.querySelector('h2').textContent}: ${choices.join('; ') || 'Без работ'}`);
     });
-    lines.push('', ...result.sections.map(item => `${item.label}: ${rubles(item.amount)}`), `Работы: ${rubles(result.work)}`, `Черновые материалы (35%): ${rubles(result.materials)}`, `Итого: ${rubles(result.total)}`, '', 'Объёмы поверхностей приблизительные. Комплект натяжного потолка включён в расценку. Остальные чистовые материалы, мебель и техника не учтены. Итоговая смета — после замера.', 'MURZ: +7 (928) 000-11-10');
+    lines.push('', ...result.sections.map(item => `${item.label}: ${rubles(item.amount)}`), `Работы: ${rubles(result.work)}`, `Черновые материалы (35%): ${rubles(result.materials)}`, `Итого: ${rubles(result.total)}`, '', 'Объёмы поверхностей приблизительные. Комплект натяжного потолка включён в расценку. Остальные чистовые материалы, мебель и техника не учтены. Итоговая смета — после замера.', 'MURZ: +7 (928) 411-31-21');
     return lines.join('\n');
   }
 

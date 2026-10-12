@@ -132,15 +132,21 @@ img { display: block; max-width: 100%; }
 .calc-page .site-header .desktop-nav a:hover, .calc-page .site-header .desktop-nav a:focus-visible { color: var(--lime); }
 .calc-page .menu-toggle { display: none; }
 .calc-page .site-header a:hover, .calc-page .calc-footer a:hover { color: #8caf4b; }
-.calc-page .calc-footer { display: grid; grid-template-columns: minmax(220px, 1fr) auto minmax(180px, 1fr); align-items: center; gap: 28px; padding: 32px clamp(24px, 6vw, 112px) 56px; background: var(--dark); color: #c4cec2; font-size: 10px; letter-spacing: 0; }
+.calc-page .calc-footer { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(290px, 1.1fr) minmax(210px, .8fr); align-items: center; gap: clamp(24px, 4vw, 56px); padding: 34px clamp(24px, 6vw, 112px) 38px; background: var(--dark); color: #c4cec2; font-size: 10px; letter-spacing: 0; }
 .calc-page .calc-footer-brand .brand-logo-link { width: clamp(160px, 18vw, 220px); height: auto; padding: 5px 8px; background: #fff; }
 .calc-page .calc-footer-brand .brand-logo { height: auto; mix-blend-mode: normal; }
 .calc-page .calc-footer-brand > p { margin: 12px 0; }
 .calc-page .calc-footer-requisites { display: grid; gap: 5px; color: #c4cec2; font-size: 10px; line-height: 1.65; }
 .calc-page .calc-footer-label { color: #93a395; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
-.calc-page .calc-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 22px; font-size: 11px; }
-.calc-page .calc-footer-end { display: flex; flex-direction: column; align-items: flex-end; gap: 20px; font-size: 12px; }
-.calc-page .calc-footer-end a:first-child { font-size: 18px; font-weight: 600; white-space: nowrap; }
+.calc-page .calc-footer nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px 24px; margin-top: 14px; font-size: 11px; }
+.calc-page .footer-label { display: block; color: #93a395; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+.calc-page .calc-footer-end { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; font-size: 12px; }
+.calc-page .calc-footer-end .footer-phone { color: #f1f4ec; font-size: 19px; font-weight: 600; white-space: nowrap; }
+.calc-page .footer-messengers { display: flex; flex-wrap: wrap; gap: 9px; }
+.calc-page .footer-messenger { display: inline-flex; align-items: center; gap: 7px; padding: 8px 10px; border: 1px solid #718173; border-radius: 999px; color: #dce4da; font-size: 10px; }
+.calc-page .footer-messenger svg { width: 15px; height: 15px; fill: currentColor; }
+.calc-page .footer-messenger:nth-child(2) svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.calc-page .footer-top { display: inline-flex; align-items: center; gap: 7px; color: #c4cec2; font-size: 9px; letter-spacing: .12em; }
 @media (min-width: 761px) {
   html { scroll-padding-top: 154px; }
   .calc-page .site-header { position: sticky; top: 0; box-shadow: 0 4px 14px #18241c12; }
@@ -168,7 +174,11 @@ img { display: block; max-width: 100%; }
   .calc-page.menu-open .site-header .nav-wrap { display: block; position: absolute; top: 72px; left: 0; right: 0; box-shadow: 0 18px 30px #1b2a2238; }
   .calc-page .site-header .desktop-nav { position: static; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 6vw 20px; }
   .calc-page .site-header .desktop-nav a { padding: 12px 0; font-size: 13px; border-bottom: 1px solid #ffffff1b; }
-  .calc-page .calc-footer { grid-template-columns: 1fr; gap: 22px; padding: 30px 18px 128px; }
-  .calc-page .calc-footer nav { justify-content: flex-start; }
-  .calc-page .calc-footer-end { align-items: flex-start; }
+  .calc-page .calc-footer { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 25px 32px; padding: 30px 6vw 128px; }
+  .calc-page .calc-footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 540px) {
+  .calc-page .calc-footer { grid-template-columns: 1fr; gap: 23px; padding: 30px 18px 128px; }
+  .calc-page .calc-footer-brand { grid-column: auto; }
+  .calc-page .calc-footer nav { gap: 12px 18px; }
 }
