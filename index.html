@@ -3,172 +3,215 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3f1eb">
-  <meta name="description" content="MURZ — студия ремонта квартир в Ростове-на-Дону. Предварительный расчёт стоимости ремонта по площади квартиры.">
-  <meta property="og:title" content="MURZ — ремонт квартир в Ростове-на-Дону">
-  <meta property="og:description" content="Студия ремонта MURZ. Предварительный расчёт стоимости ремонта квартиры.">
-  <meta property="og:type" content="website">
-  <title>Ремонт квартир в Ростове-на-Дону — MURZ</title>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"MURZ — Студия ремонта","areaServed":{"@type":"City","name":"Ростов-на-Дону"},"description":"Студия ремонта квартир в Ростове-на-Дону."}
-  </script>
+  <meta name="theme-color" content="#201d1c">
+  <meta name="description" content="MURZ — ремонт квартир и дизайн интерьеров в Ростове-на-Дону. Прозрачная смета, ремонт под ключ и дизайн-проект по фиксированной цене.">
+  <title>MURZ — ремонт и дизайн в Ростове-на-Дону</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="content.css">
-  <link rel="stylesheet" href="site.css?v=hero-readable-20261012">
+  <link rel="stylesheet" href="style.css?v=maison-version-20261028-43">
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="header-main">
-      <a class="brand brand-logo-link" href="#top" aria-label="MURZ — наверх"><img class="brand-logo" src="images/murz-logo.webp" alt="Логотип MURZ — ремонт квартир в Ростове-на-Дону" width="2172" height="724"></a>
-      <span class="header-place">Ремонт квартир · Ростов-на-Дону</span>
-      <div class="header-contacts"><a class="header-phone" href="tel:+79284113121">+7 (928) 411-31-21</a><a class="header-cta" href="calculator/">Рассчитать стоимость <span aria-hidden="true">↗</span></a></div>
-      <button class="menu-toggle" aria-label="Открыть меню" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span></button>
-    </div>
-    <div class="nav-wrap"><nav class="desktop-nav" id="primary-navigation" aria-label="Основная навигация">
-      <a href="#about">О студии</a><a href="#gallery">Примеры</a><a href="#advantages">Преимущества</a><a href="calculator/">Калькулятор</a><a href="#services">Виды ремонта</a><a href="#stages">Этапы</a><a href="#prices">Цены</a><a href="#booking">Контакты</a>
-    </nav></div>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="MURZ, на главную">MURZ<span>·</span></a>
+    <span class="masthead-city">РОСТОВ-НА-ДОНУ</span>
+    <nav class="desktop-nav" aria-label="Основное меню">
+      <a href="#philosophy">Философия</a>
+      <a href="#portfolio">Стоимость</a>
+      <a href="#team">Команда</a>
+    </nav>
+    <a class="masthead-call" href="tel:+79284113121">+7 (928) 411-31-21</a>
+    <button class="menu-trigger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
   </header>
 
-  <main>
-    <section class="hero">
-      <img class="hero-photo" src="images/murz-hero.webp" alt="Визуализация светлой кухни-гостиной в тёплых натуральных оттенках" fetchpriority="high">
-      <div class="hero-overlay"></div>
-      <div class="hero-inner">
-        <p class="hero-eyebrow"><span></span> MURZ / СТУДИЯ РЕМОНТА</p>
-        <h1>Ремонт квартир<br>в Ростове-на-Дону</h1>
-        <p class="hero-lead">От первого замера до готового интерьера. Обсуждаем задачи, рассчитываем работы и ведём ремонт по этапам.</p>
-        <div class="hero-actions"><a class="button button-accent" href="calculator/">Рассчитать стоимость <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#gallery">Смотреть примеры <span aria-hidden="true">↓</span></a></div>
-        <div class="hero-meta"><span>РОСТОВ-НА-ДОНУ</span><span>РЕМОНТ КВАРТИР</span><span>01 / 09</span></div>
+  <nav class="menu-panel" id="menu-panel" aria-label="Полное меню" inert>
+    <div class="menu-panel-inner">
+      <p class="eyebrow">MURZ / РЕМОНТ И ДИЗАЙН</p>
+      <a href="#philosophy"><span>01</span> Почему выбирают MURZ</a>
+      <a href="#portfolio"><span>02</span> Стоимость · 1-комнатная</a>
+      <a href="#portfolio-two-room"><span>03</span> Стоимость · 2-комнатная</a>
+      <a href="#estimate"><span>04</span> Калькулятор стоимости</a>
+      <a href="#process"><span>05</span> Как проходит работа</a>
+      <a href="#work-prices"><span>06</span> Цены по смете</a>
+      <a href="#materials"><span>07</span> Материалы — наша забота</a>
+      <a href="#team"><span>08</span> Наша команда</a>
+      <a class="menu-phone" href="tel:+79284113121">Обсудить проект · +7 (928) 411-31-21 <span>↗</span></a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="cover page-section" id="cover" data-page="00" aria-labelledby="cover-title">
+      <div class="cover-image" role="img" aria-label="Интерьер в оттенках бордо, графита и светлого камня"></div>
+      <div class="cover-overlay"></div>
+      <div class="cover-content">
+        <h1 id="cover-title" class="cover-logo"><img src="images/murz-logo.svg" alt="MURZ — ремонт и дизайн"></h1>
+      </div>
+      <p class="cover-location">РОСТОВ-НА-ДОНУ</p>
+    </section>
+
+
+    <section class="philosophy page-section" id="philosophy" data-page="01">
+      <h2>Почему выбирают MURZ</h2>
+      <div class="philosophy-content">
+        <div class="philosophy-benefits">
+          <article><span aria-hidden="true">✓</span><div><h3>Фиксированная цена</h3><p>После утверждения сметы мы не увеличиваем цену работ в процессе ремонта без согласования с вами.</p></div></article>
+          <article><span aria-hidden="true">✓</span><div><h3>Профессионализм</h3><p>Опыт работы в сфере ремонта — более 5 лет, а опыт некоторых мастеров доходит до 20 лет.</p></div></article>
+          <article><span aria-hidden="true">✓</span><div><h3>Материалы — наша забота</h3><p>Мы самостоятельно организуем закупку и доставку материалов.</p></div></article>
+          <article><span aria-hidden="true">✓</span><div><h3>Индивидуальный подход</h3><p>Учитываем особенности каждого проекта и все ваши пожелания.</p></div></article>
+          <article><span aria-hidden="true">✓</span><div><h3>Фото- и видеоотчёты</h3><p>Будем присылать вам фото и видео на каждом этапе работ.</p></div></article>
+          <article><span aria-hidden="true">✓</span><div><h3>Качественно и быстро</h3><p>Сделаем все работы наилучшим образом в максимально сжатые сроки.</p></div></article>
+          <article><span aria-hidden="true">✓</span><div><h3>Менеджер проекта</h3><p>Я буду с вами на связи 24/7 и полностью отвечаю за все работы.</p></div></article>
+        </div>
+        <div class="philosophy-feature-list">
+          <article><span>ОТКРЫТЫЙ ПРОЦЕСС</span><h3>Покажем действующие объекты</h3><p>Готовы показать объекты на любой стадии ремонта, чтобы вы убедились в качестве работ.</p></article>
+          <article><span>ПОНЯТНАЯ СТОИМОСТЬ</span><h3>Дизайн-проект</h3><strong>2 000 ₽/м²</strong><p>Без «от» и «до». Финальная стоимость полного проекта со всей документацией, чертежами и 3D-визуализацией — 2 000 ₽ за 1 м².</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="about section-pad" id="about">
-      <div class="section-kicker"><span>01</span> О СТУДИИ</div>
-      <div class="section-heading"><h2>Ремонт начинается<br>с <em>диалога</em></h2><div class="about-copy"><p>MURZ — студия ремонта квартир в Ростове-на-Дону. Помогаем превратить задачу «нужно сделать ремонт» в понятный порядок работ, смету и готовое пространство.</p><p>Начинаем с квартиры и ваших пожеланий. Затем выбираем решения, согласовываем объём работ и двигаемся шаг за шагом.</p><a class="section-arrow" href="#stages">Как мы работаем <span aria-hidden="true">↗</span></a></div></div>
-    </section>
-
-    <section class="gallery section-pad" id="gallery">
-      <div class="section-kicker"><span>02</span> ВИЗУАЛЬНЫЕ ПРИМЕРЫ</div>
-      <div class="section-heading"><h2>Пространства,<br>в которых <em>хочется жить</em></h2><p class="section-copy">Несколько интерьерных образов, которые показывают наш подход к фактурам, свету и спокойной палитре. Это визуализации, не фотографии завершённых объектов.</p></div>
-      <div class="gallery-grid"><figure class="gallery-placeholder large"><img src="images/murz-kitchen.webp" alt="Визуальный пример интерьера кухни с деревянными фасадами" loading="lazy"><figcaption><span>Кухня</span><i>01</i></figcaption></figure><figure class="gallery-placeholder"><img src="images/murz-living.webp" alt="Визуальный пример уютной гостиной после ремонта" loading="lazy"><figcaption><span>Гостиная</span><i>02</i></figcaption></figure><figure class="gallery-placeholder"><img src="images/murz-bathroom.webp" alt="Визуальный пример ванной комнаты с отделкой под камень" loading="lazy"><figcaption><span>Ванная</span><i>03</i></figcaption></figure></div>
-      <div class="comparison-intro"><div><div class="section-kicker"><span>01</span> КУХНЯ · ДО И ПОСЛЕ</div><h3>Одно пространство.<br><em>Новый взгляд.</em></h3></div><p>Передвиньте разделитель, чтобы сравнить кухню до ремонта и после обновления.</p></div>
-      <div class="before-after" style="--comparison:50%" role="group" aria-label="Сравнение кухни до и после ремонта">
-        <img class="before-after-image after-image" src="images/kitchen-after.jpg" alt="Кухня после ремонта: светлый современный интерьер с новой мебелью и техникой" width="1448" height="1086" loading="lazy">
-        <div class="before-layer"><img class="before-after-image" src="images/kitchen-before.jpg" alt="Кухня до ремонта: старая отделка, мебель и техника" width="1448" height="1086" loading="lazy"></div>
-        <span class="comparison-label comparison-label-before" aria-hidden="true">До</span><span class="comparison-label comparison-label-after" aria-hidden="true">После</span>
-        <div class="comparison-divider" aria-hidden="true"><span>↔</span></div>
-        <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label="Передвиньте разделитель, чтобы сравнить кухню до и после ремонта" aria-valuetext="Показано до ремонта 50 процентов">
-      </div>
-      <div class="comparison-intro comparison-intro-secondary"><div><div class="section-kicker"><span>02</span> ВАННАЯ · ДО И ПОСЛЕ</div><h3>Новая ванная —<br><em>новый ритм утра.</em></h3></div><p>Сравните старую отделку и обновлённое пространство, передвигая разделитель по фотографии.</p></div>
-      <div class="before-after" style="--comparison:50%" role="group" aria-label="Сравнение ванной до и после ремонта">
-        <img class="before-after-image after-image" src="images/bathroom-after.jpg" alt="Ванная после ремонта: светлая отделка, встроенная подсветка, новая мебель и сантехника" width="1448" height="1086" loading="lazy">
-        <div class="before-layer"><img class="before-after-image" src="images/bathroom-before.jpg" alt="Ванная до ремонта: старая плитка, отделка и сантехника" width="1448" height="1086" loading="lazy"></div>
-        <span class="comparison-label comparison-label-before" aria-hidden="true">До</span><span class="comparison-label comparison-label-after" aria-hidden="true">После</span>
-        <div class="comparison-divider" aria-hidden="true"><span>↔</span></div>
-        <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label="Передвиньте разделитель, чтобы сравнить ванную до и после ремонта" aria-valuetext="Показано до ремонта 50 процентов">
-      </div>
-      <div class="comparison-intro comparison-intro-secondary"><div><div class="section-kicker"><span>03</span> ГОСТИНАЯ · ДО И ПОСЛЕ</div><h3>Знакомая комната —<br><em>новая атмосфера.</em></h3></div><p>Передвиньте разделитель, чтобы увидеть, как меняется гостиная после обновления.</p></div>
-      <div class="before-after" style="--comparison:50%" role="group" aria-label="Сравнение гостиной до и после ремонта">
-        <img class="before-after-image after-image" src="images/living-after.jpg" alt="Гостиная после ремонта: светлый интерьер с новым диваном, мебелью и освещением" width="1448" height="1086" loading="lazy">
-        <div class="before-layer"><img class="before-after-image" src="images/living-before.jpg" alt="Гостиная до ремонта: старая отделка, мебель и интерьер" width="1448" height="1086" loading="lazy"></div>
-        <span class="comparison-label comparison-label-before" aria-hidden="true">До</span><span class="comparison-label comparison-label-after" aria-hidden="true">После</span>
-        <div class="comparison-divider" aria-hidden="true"><span>↔</span></div>
-        <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label="Передвиньте разделитель, чтобы сравнить гостиную до и после ремонта" aria-valuetext="Показано до ремонта 50 процентов">
+    <section class="portfolio page-section" id="portfolio" data-page="02">
+      <div class="portfolio-heading portfolio-title"><h2>Стоимость наших работ</h2><div class="reel-tools"><button type="button" data-reel="one-room" data-step="-1" aria-label="Предыдущий вариант">←</button><button type="button" data-reel="one-room" data-step="1" aria-label="Следующий вариант">→</button></div></div>
+      <div class="portfolio-reel" id="one-room" tabindex="0" aria-label="Варианты стоимости ремонта однокомнатной квартиры">
+        <article class="portfolio-card"><div class="portfolio-photo portfolio-placeholder" role="img" aria-label="Фото 1"><span>Фото 1</span></div><div class="portfolio-caption"><div><span>БЮДЖЕТ · 15 000–20 000 ₽/м²</span><h4>Однокомнатная · 28 м²</h4></div><strong>490 000 ₽</strong></div></article>
+        <article class="portfolio-card"><div class="portfolio-photo portfolio-placeholder" role="img" aria-label="Фото 2"><span>Фото 2</span></div><div class="portfolio-caption"><div><span>БЮДЖЕТ · 20 000–25 000 ₽/м²</span><h4>Однокомнатная · 28 м²</h4></div><strong>650 000 ₽</strong></div></article>
       </div>
     </section>
 
-    <section class="advantages section-pad" id="advantages">
-      <div class="section-kicker"><span>03</span> ПРЕИМУЩЕСТВА</div>
-      <div class="section-heading"><h2>Всё важное —<br><em>под контролем</em></h2><p class="section-copy">В ремонте важны не только материалы и мастера. Не меньше значат понятные решения на каждом этапе.</p></div>
-      <div class="adv-grid">
-        <article class="adv-card"><span>01 / СМЕТА</span><h3>Понятный объём работ</h3><p>Обсуждаем задачи до начала ремонта, чтобы вы видели, из чего складывается стоимость.</p></article>
-        <article class="adv-card"><span>02 / МАТЕРИАЛЫ</span><h3>Решения под проект</h3><p>Подбираем отделку с учётом состояния квартиры, бюджета и желаемого результата.</p></article>
-        <article class="adv-card"><span>03 / ПРОЦЕСС</span><h3>Последовательные этапы</h3><p>У каждого шага есть своя задача — от подготовки основания до финальной отделки.</p></article>
-        <article class="adv-card"><span>04 / РЕЗУЛЬТАТ</span><h3>Внимание к деталям</h3><p>Проверяем выполненные работы и обсуждаем вопросы по мере движения проекта.</p></article>
+    <section class="portfolio page-section" id="portfolio-two-room" data-page="03">
+      <div class="portfolio-heading portfolio-title portfolio-controls"><div class="reel-tools"><button type="button" data-reel="two-room" data-step="-1" aria-label="Предыдущий вариант">←</button><button type="button" data-reel="two-room" data-step="1" aria-label="Следующий вариант">→</button></div></div>
+      <div class="portfolio-reel" id="two-room" tabindex="0" aria-label="Варианты стоимости ремонта двухкомнатной квартиры">
+        <article class="portfolio-card"><div class="portfolio-photo portfolio-placeholder" role="img" aria-label="Фото 3"><span>Фото 3</span></div><div class="portfolio-caption"><div><span>БЮДЖЕТ · 15 000–20 000 ₽/м²</span><h4>Двухкомнатная · 45 м²</h4></div><strong>800 000 ₽</strong></div></article>
+        <article class="portfolio-card"><div class="portfolio-photo portfolio-placeholder" role="img" aria-label="Фото 4"><span>Фото 4</span></div><div class="portfolio-caption"><div><span>БЮДЖЕТ · 20 000–25 000 ₽/м²</span><h4>Двухкомнатная · 45 м²</h4></div><strong>1 000 000 ₽</strong></div></article>
       </div>
     </section>
 
-    <section class="estimate section-pad" id="estimate">
-      <div class="section-kicker"><span>04</span> КАЛЬКУЛЯТОР РЕМОНТА</div>
-      <div class="estimate-teaser">
-        <div><h2>Ваш ремонт.<br><em>Ваш расчёт.</em></h2><p>Площадь, потолки, стены, пол и инженерия — соберите будущий ремонт по деталям. Калькулятор покажет стоимость выбранных работ и ориентир на черновые материалы.</p><a class="button button-accent" href="calculator/">Рассчитать стоимость <span aria-hidden="true">↗</span></a><span class="estimate-teaser-note">6 разделов · результат сразу · без регистрации</span></div>
-        <a class="estimate-teaser-image" href="calculator/" aria-label="Открыть калькулятор ремонта"><img src="images/calc-apartment.webp" width="1536" height="1024" alt="Изометрическая иллюстрация квартиры для расчёта ремонта" loading="lazy"><span>ОТ ПЛАНИРОВКИ К СМЕТЕ <i aria-hidden="true">↗</i></span></a>
+    <section class="estimate page-section" id="estimate" data-page="04">
+      <div class="estimate-intro">
+        <p class="estimate-eyebrow">MURZ / ДИЗАЙН И РЕМОНТ</p>
+        <h2>Стоимость<br>дизайна</h2>
+        <p class="estimate-design-price">2 000 <span>₽ / м²</span></p>
+        <div class="estimate-example"><span>ПРИМЕР</span><p>Дом · 100 м²</p><strong>1 700 000 ₽ <small>+ 200 000 ₽ дизайн</small></strong></div>
       </div>
-    </section>
-    <section class="services section-pad" id="services">
-      <div class="section-kicker"><span>05</span> ВИДЫ РЕМОНТА</div>
-      <div class="section-heading"><h2>Под задачу<br><em>и под квартиру</em></h2><p class="section-copy">Косметическое обновление или полный ремонт с инженерными работами — объём определяем после знакомства с объектом.</p></div>
-      <div class="service-grid">
-        <article class="service-card"><div class="service-image"><img src="images/murz-living.webp" alt="Визуализация интерьера гостиной" loading="lazy"></div><div class="service-body"><span>01 / ОБНОВЛЕНИЕ</span><h3>Косметический ремонт</h3><p>Освежить интерьер, обновить покрытия и детали без масштабной перестройки квартиры.</p><a href="services/kosmeticheskiy-remont.html">Подробнее об услуге <span aria-hidden="true">↗</span></a></div></article>
-        <article class="service-card"><div class="service-image"><img src="images/murz-kitchen.webp" alt="Визуализация интерьера кухни" loading="lazy"></div><div class="service-body"><span>02 / ПОД КЛЮЧ</span><h3>Капитальный ремонт</h3><p>Подготовка оснований, инженерные работы и отделка — с планированием всего объёма.</p><a href="services/kapitalnyy-remont.html">Подробнее об услуге <span aria-hidden="true">↗</span></a></div></article>
-        <article class="service-card"><div class="service-image"><img src="images/murz-bathroom.webp" alt="Визуализация интерьера ванной" loading="lazy"></div><div class="service-body"><span>03 / ПО ПРОЕКТУ</span><h3>Ремонт по дизайн-проекту</h3><p>Работа по готовым чертежам и ведомостям с вниманием к деталям задуманного интерьера.</p><a href="services/remont-po-dizayn-proektu.html">Подробнее об услуге <span aria-hidden="true">↗</span></a></div></article>
-      </div>
-      <a class="services-all-link" href="services/index.html">Все виды ремонта и статьи <span aria-hidden="true">↗</span></a>
-    </section>
-
-    <section class="stages section-pad" id="stages">
-      <div class="section-kicker"><span>06</span> КАК ВСЁ ПРОИСХОДИТ</div>
-      <div class="section-heading"><h2>От идеи<br>до <em>результата</em></h2><p class="section-copy">Разбиваем большой ремонт на последовательные решения. Так проще понимать, что происходит сейчас и что будет дальше.</p></div>
-      <div class="stage-list">
-        <article><span>01</span><h3>Знакомство</h3><p>Вы рассказываете о квартире, задачах и желаемом результате.</p></article>
-        <article><span>02</span><h3>Замер</h3><p>Оцениваем состояние объекта и уточняем технические детали.</p></article>
-        <article><span>03</span><h3>Смета</h3><p>Определяем состав работ и обсуждаем решения до старта.</p></article>
-        <article><span>04</span><h3>Ремонт</h3><p>Выполняем работы по согласованной последовательности.</p></article>
-        <article><span>05</span><h3>Приёмка</h3><p>Проверяем результат и передаём готовое пространство.</p></article>
+      <div class="estimate-content">
+        <p class="estimate-eyebrow">ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ</p>
+        <h2>Стоимость ремонта квартиры</h2>
+        <p>Выберите площадь: ориентировочная стоимость работ — 15 000 ₽ за м².</p>
+        <label class="area-label" for="area">Площадь квартиры</label>
+        <div class="area-number"><output id="area-output" for="area">100</output><span>М²</span></div>
+        <input id="area" type="range" min="20" max="200" step="1" value="100" aria-label="Площадь квартиры от 20 до 200 квадратных метров">
+        <div class="range-ends"><span>20 м²</span><span>200 м²</span></div>
+        <div class="estimate-total"><span>Предварительно за работы</span><strong id="estimate-total">1 500 000 ₽</strong></div>
+        <p class="estimate-note">Расчёт предварительный. Пример для дома приведён отдельно.</p>
       </div>
     </section>
 
-    <section class="prices section-pad" id="prices">
-      <div class="section-kicker"><span>07</span> СТОИМОСТЬ РЕМОНТА</div>
-      <div class="section-heading"><h2>Цены на ремонт квартир<br><em>в Ростове-на-Дону</em></h2><p class="section-copy">Выберите тип квартиры, формат ремонта и площадь. Таблица поможет сравнить ориентиры за работы, а подробную смету подготовим под ваш объект.</p></div>
-      <div class="pricing-legend"><span>Ориентировочная стоимость работ за 1 м²</span><span>Материалы и состав работ уточняем в смете</span></div>
-
-      <section class="pricing-board" aria-labelledby="new-build-prices">
-        <div class="pricing-board-head"><div><span class="pricing-index">01 / ТИП ЖИЛЬЯ</span><h3 id="new-build-prices">Новостройка</h3></div><p>Когда старую отделку демонтировать не требуется. Объём подготовки зависит от состояния квартиры после застройщика.</p></div>
-        <div class="pricing-table-wrap"><table class="pricing-table">
-          <thead><tr><th scope="col">Формат ремонта</th><th scope="col">до 40 м²</th><th scope="col">41–80 м²</th><th scope="col">более 80 м²</th></tr></thead>
-          <tbody>
-            <tr><th scope="row"><a href="services/kosmeticheskiy-remont.html">Косметический ремонт <span aria-hidden="true">↗</span></a><small>Обновление отделки и деталей</small></th><td data-label="до 40 м²"><strong>17 500 ₽</strong><small>/ м²</small></td><td data-label="41–80 м²"><strong>15 400 ₽</strong><small>/ м²</small></td><td data-label="более 80 м²"><strong>14 300 ₽</strong><small>/ м²</small></td></tr>
-            <tr><th scope="row"><a href="services/kapitalnyy-remont.html">Капитальный ремонт <span aria-hidden="true">↗</span></a><small>Основания, инженерия и отделка</small></th><td data-label="до 40 м²"><strong>19 000 ₽</strong><small>/ м²</small></td><td data-label="41–80 м²"><strong>17 200 ₽</strong><small>/ м²</small></td><td data-label="более 80 м²"><strong>16 100 ₽</strong><small>/ м²</small></td></tr>
-            <tr><th scope="row"><a href="services/remont-po-dizayn-proektu.html">По дизайн-проекту <span aria-hidden="true">↗</span></a><small>Работы по готовым чертежам</small></th><td data-label="до 40 м²"><strong>21 200 ₽</strong><small>/ м²</small></td><td data-label="41–80 м²"><strong>19 500 ₽</strong><small>/ м²</small></td><td data-label="более 80 м²"><strong>19 000 ₽</strong><small>/ м²</small></td></tr>
-          </tbody>
-        </table></div>
-      </section>
-
-      <section class="pricing-board" aria-labelledby="resale-prices">
-        <div class="pricing-board-head"><div><span class="pricing-index">02 / ТИП ЖИЛЬЯ</span><h3 id="resale-prices">Вторичное жильё</h3></div><p>Существующие покрытия и коммуникации сначала проверяем. Демонтаж и подготовка могут заметно изменить объём работ.</p></div>
-        <div class="pricing-table-wrap"><table class="pricing-table">
-          <thead><tr><th scope="col">Формат ремонта</th><th scope="col">до 40 м²</th><th scope="col">41–80 м²</th><th scope="col">более 80 м²</th></tr></thead>
-          <tbody>
-            <tr><th scope="row"><a href="services/kosmeticheskiy-remont.html">Косметический ремонт <span aria-hidden="true">↗</span></a><small>Демонтаж покрытий и новая отделка</small></th><td data-label="до 40 м²"><strong>20 300 ₽</strong><small>/ м²</small></td><td data-label="41–80 м²"><strong>18 200 ₽</strong><small>/ м²</small></td><td data-label="более 80 м²"><strong>17 100 ₽</strong><small>/ м²</small></td></tr>
-            <tr><th scope="row"><a href="services/kapitalnyy-remont.html">Капитальный ремонт <span aria-hidden="true">↗</span></a><small>Замена инженерии и подготовка оснований</small></th><td data-label="до 40 м²"><strong>22 800 ₽</strong><small>/ м²</small></td><td data-label="41–80 м²"><strong>21 000 ₽</strong><small>/ м²</small></td><td data-label="более 80 м²"><strong>19 900 ₽</strong><small>/ м²</small></td></tr>
-            <tr><th scope="row"><a href="services/remont-po-dizayn-proektu.html">По дизайн-проекту <span aria-hidden="true">↗</span></a><small>Комплексный ремонт по чертежам</small></th><td data-label="до 40 м²"><strong>24 000 ₽</strong><small>/ м²</small></td><td data-label="41–80 м²"><strong>22 800 ₽</strong><small>/ м²</small></td><td data-label="более 80 м²"><strong>21 800 ₽</strong><small>/ м²</small></td></tr>
-          </tbody>
-        </table></div>
-      </section>
-
-      <div class="pricing-bottom"><p><strong>Как читать таблицу.</strong> Это ориентиры по площади, а не итоговая цена договора. Состояние квартиры, перечень работ, материалы и технические решения уточняем после осмотра и фиксируем в смете.</p><a href="tel:+79284113121">Обсудить смету <span aria-hidden="true">↗</span></a></div>
+    <section class="process page-section" id="process" data-page="05">
+      <div class="process-heading"><h2>Формат работы<br><em>с нами</em></h2></div>
+      <div class="process-layout">
+        <ol class="process-list">
+          <li><span>01</span><div><h3>Бесплатная консультация по ремонту и выезд на замер</h3></div></li>
+          <li><span>02</span><div><h3>Согласование сметы с окончательной стоимостью работ</h3><p>Стоимость останется фиксированной и не увеличится во время ремонта без согласования с вами.</p></div></li>
+          <li><span>03</span><div><h3>Подписание договора с учётом сроков сдачи</h3></div></li>
+          <li><span>04</span><div><h3>Ежедневный фото- и видеоотчёт по выполненным работам</h3></div></li>
+          <li><span>05</span><div><h3>Приёмка вами готового объекта</h3></div></li>
+        </ol>
+        <aside class="client-side"><h3>Вам нужно только:</h3><ul><li>Выбрать результат</li><li>Согласовать смету</li><li>Ежедневно получать фото- и видеоотчёты по работе и материалам</li><li>Принять готовую квартиру</li></ul></aside>
+      </div>
     </section>
 
-    <section class="terms section-pad" id="terms">
-      <div class="section-kicker"><span>08</span> ПЕРЕД НАЧАЛОМ</div>
-      <div class="terms-grid"><article><div><h2>Понятные<br><em>договорённости</em></h2><p>До начала работ обсуждаем состав ремонта, материалы и порядок взаимодействия.</p></div><span class="term-mark">01 / ПЛАН</span></article><article><div><h2>Детали<br><em>в смете</em></h2><p>После осмотра квартиры готовим расчёт под конкретный объект и ваши задачи.</p></div><span class="term-mark">02 / РАСЧЁТ</span></article></div>
+    <section class="work-prices page-section" id="work-prices" data-page="06">
+      <div class="section-meta"><span>ПРЕДВАРИТЕЛЬНАЯ СМЕТА</span><span>ВИДЫ РАБОТ · 2026</span></div>
+      <div class="section-title-row"><h2>Цены на работы<br><em>в 2026 году</em></h2><p>Предварительная смета на некоторые виды работ.</p></div>
+      <div class="rate-table">
+        <div class="rate-row rate-head"><span>РАЗДЕЛ</span><span>ВИД РАБОТ</span><span>СТОИМОСТЬ</span></div>
+        <div class="rate-row"><span>01 / СТЕНЫ</span><span>Подготовка под обои</span><strong>2 000 ₽</strong></div>
+        <div class="rate-row"><span>01 / СТЕНЫ</span><span>Подготовка под покраску</span><strong>2 000 ₽</strong></div>
+        <div class="rate-row"><span>02 / ПОЛ</span><span>Настил напольного покрытия</span><strong>2 000 ₽</strong></div>
+        <div class="rate-row"><span>03 / ПЛИТКА</span><span>Плиточные работы</span><strong>2 000 ₽</strong></div>
+        <div class="rate-row"><span>04 / ЭЛЕКТРИКА</span><span>Электромонтажные работы</span><strong>2 000 ₽</strong></div>
+        <div class="rate-row"><span>05 / САНТЕХНИКА</span><span>Сантехнические работы</span><strong>2 000 ₽</strong></div>
+      </div>
     </section>
 
-    <section class="booking section-pad" id="booking">
-      <div class="section-kicker"><span>09</span> СВЯЗАТЬСЯ</div>
-      <div class="booking-layout"><h2>Давайте обсудим<br><em>ваш ремонт</em></h2><div class="booking-card"><p>Расскажите о квартире и желаемом результате. Начнём с разговора, затем определим следующий шаг.</p><a class="booking-phone" href="tel:+79284113121">+7 (928) 411-31-21 <span aria-hidden="true">↗</span></a><a class="booking-link" href="calculator/">Сначала рассчитать ориентир <span aria-hidden="true">↗</span></a></div></div>
+    <section class="materials page-section" id="materials" data-page="07">
+      <div class="materials-content">
+        <div class="section-meta section-meta-dark"><span>07 / МАТЕРИАЛЫ</span><span>НАША ЗАБОТА</span></div>
+        <h2>Материалы —<br><em>наша забота</em></h2>
+        <p class="lead">По вашему желанию вам не придётся самостоятельно закупать черновые материалы: штукатурку, шпаклёвку и другие позиции. Мы возьмём это на себя, а вы сможете следить за результатом в ежедневных отчётах и принимать работы онлайн или на объекте.</p>
+        <h3 class="materials-how-title">Как это работает?</h3>
+        <div class="material-steps">
+          <article><span>01</span><div><h3>Отдельный чат</h3><p>Создаём чат по материалам в удобном для вас мессенджере.</p></div></article>
+          <article><span>02</span><div><h3>Фото и документы</h3><p>Регулярно отправляем фотографии материалов, чеки и накладные.</p></div></article>
+          <article><span>03</span><div><h3>Онлайн-смета в телефоне</h3><p>Фиксируем каждую покупку. Вы в любой момент увидите, сколько потрачено, на что и когда, и сможете сверить данные с чатом.</p></div></article>
+        </div>
+      </div>
     </section>
+
+    <section class="team page-section" id="team" data-page="08">
+      <div class="team-title-row">
+        <div>
+          <span class="team-eyebrow">08 / НАША КОМАНДА</span>
+          <h2>Люди, которым<br><em>можно доверить ремонт</em></h2>
+        </div>
+        <div class="reel-tools">
+          <button type="button" data-reel="team-reel" data-step="-1" aria-label="Предыдущие специалисты">←</button>
+          <button type="button" data-reel="team-reel" data-step="1" aria-label="Следующие специалисты">→</button>
+        </div>
+      </div>
+      <div class="team-reel" id="team-reel" tabindex="0" aria-label="Специалисты команды MURZ">
+        <article class="team-card">
+          <div class="team-card-photo"><img src="images/team-director.webp" alt="Концептуальный портрет директора MURZ" loading="lazy"></div>
+          <div class="team-card-copy"><span>01 / РУКОВОДСТВО</span><h3>Максим Андреевич<br>Воронцов</h3><p>Директор ИП</p></div>
+        </article>
+        <article class="team-card">
+          <div class="team-card-photo"><img src="images/team-foreman.webp" alt="Концептуальный портрет прораба MURZ" loading="lazy"></div>
+          <div class="team-card-copy"><span>02 / ОРГАНИЗАЦИЯ</span><h3>Андрей Викторович<br>Соколов</h3><p>Прораб</p></div>
+        </article>
+        <article class="team-card">
+          <div class="team-card-photo"><img src="images/team-electrician.webp" alt="Концептуальный портрет электрика MURZ" loading="lazy"></div>
+          <div class="team-card-copy"><span>03 / ЭЛЕКТРИКА</span><h3>Михаил Игоревич<br>Орлов</h3><p>Электрик</p></div>
+        </article>
+        <article class="team-card">
+          <div class="team-card-photo"><img src="images/team-plumber.webp" alt="Концептуальный портрет сантехника MURZ" loading="lazy"></div>
+          <div class="team-card-copy"><span>04 / САНТЕХНИКА</span><h3>Сергей Павлович<br>Кравцов</h3><p>Сантехник</p></div>
+        </article>
+        <article class="team-card">
+          <div class="team-card-photo"><img src="images/team-finisher.webp" alt="Концептуальный портрет мастера отделочных работ MURZ" loading="lazy"></div>
+          <div class="team-card-copy"><span>05 / ОТДЕЛКА</span><h3>Денис Алексеевич<br>Волков</h3><p>Мастер отделочных работ</p></div>
+        </article>
+        <article class="team-card">
+          <div class="team-card-photo"><img src="images/team-tiler.webp" alt="Концептуальный портрет плиточника MURZ" loading="lazy"></div>
+          <div class="team-card-copy"><span>06 / ПЛИТОЧНЫЕ РАБОТЫ</span><h3>Роман Евгеньевич<br>Лебедев</h3><p>Плиточник</p></div>
+        </article>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-company"><a class="brand brand-logo-link footer-logo-link" href="#top"><img class="brand-logo" src="images/murz-logo.webp" alt="Логотип MURZ — ремонт квартир в Ростове-на-Дону" width="2172" height="724"></a><p>Ремонт квартир в Ростове-на-Дону</p><p class="legal-requisites"><span class="legal-requisites-label">Реквизиты</span><span>ИП Мамурзаев Эдгар Эльмарович</span><span>ИНН 237100375184</span><span>ОГРНИП 322237500327265</span></p></div>
-    <div class="footer-navigation"><span class="footer-label">Навигация</span><nav aria-label="Навигация в футере"><a href="#about">О студии</a><a href="#gallery">Примеры</a><a href="#services">Виды ремонта</a><a href="#stages">Этапы</a><a href="#prices">Цены</a><a href="calculator/">Калькулятор</a></nav></div>
-    <div class="footer-contact-group"><span class="footer-label">Связаться</span><a class="footer-phone" href="tel:+79284113121">+7 (928) 411-31-21</a><div class="footer-messengers" aria-label="Мессенджеры"><span class="footer-messenger" role="img" aria-label="Telegram — ссылка будет добавлена"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21.5 3.5-3.2 16.1c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.3L5.8 11.2.9 9.7c-1.1-.3-1.1-1.1.2-1.6L20.2.7c.9-.3 1.7.2 1.3 2.8Z"/></svg><span>Telegram</span></span><span class="footer-messenger" role="img" aria-label="MAX — ссылка будет добавлена"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h14A2.5 2.5 0 0 1 21.5 7v8a2.5 2.5 0 0 1-2.5 2.5h-6l-5.5 3v-3H5A2.5 2.5 0 0 1 2.5 15V7A2.5 2.5 0 0 1 5 4.5Z"/><path d="M7 9h10M7 12.5h7"/></svg><span>MAX</span></span></div><a class="footer-top" href="#top">НАВЕРХ <span aria-hidden="true">↑</span></a></div>
+  <footer class="footer">
+    <div class="footer-brand-block">
+      <a class="footer-logo" href="#top" aria-label="MURZ, вернуться в начало"><img src="images/murz-logo-footer.svg" alt="MURZ — ремонт и дизайн"></a>
+      <p>Ремонт квартир и дизайн интерьеров<br>в Ростове-на-Дону</p>
+    </div>
+    <nav class="footer-nav" aria-label="Навигация в подвале">
+      <span class="footer-heading">РАЗДЕЛЫ</span>
+      <div class="footer-links">
+        <a href="#philosophy">Почему MURZ</a>
+        <a href="#portfolio">Стоимость ремонта</a>
+        <a href="#estimate">Калькулятор</a>
+        <a href="#process">Как мы работаем</a>
+        <a href="#work-prices">Цены по смете</a>
+        <a href="#materials">Материалы</a>
+        <a href="#team">Наша команда</a>
+      </div>
+    </nav>
+    <div class="footer-contact">
+      <span class="footer-heading">ОБСУДИТЬ ПРОЕКТ</span>
+      <a class="footer-phone" href="tel:+79284113121">+7 (928) 411-31-21</a>
+      <span>ИП Мамурзаев Эдгар Эльмарович</span>
+      <span>ИНН 237100375184 · ОГРНИП 322237500327265</span>
+    </div>
+    <div class="footer-bottom"><span>© MURZ · 2026</span><span>Ремонт и дизайн · Ростов-на-Дону</span><a href="#top">НАВЕРХ ↑</a></div>
   </footer>
-  <div class="floating-actions"><a class="float-book" href="calculator/"><span>Рассчитать стоимость</span><span class="book-arrow" aria-hidden="true">↗</span></a></div>
-  <script src="script.js?v=footer-consent-20261012" defer></script>
-  <script src="cookie-consent.js?v=consent-gate-20261012" defer></script>
+  <script src="site.js?v=maison-version-20261027-3" defer></script>
 </body>
 </html>
