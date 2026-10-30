@@ -48,8 +48,8 @@ body.menu-open .menu-panel { opacity: 1; visibility: visible; transform: none; }
 .menu-phone { display: flex; grid-column: 1 / -1; justify-content: space-between; margin-top: 31px; color: #d4b9a6; font-size: 13px; }
 
 .cover { position: relative; display: flex; min-height: min(900px, calc(100svh - 72px)); min-height: max(690px, calc(100svh - 72px)); align-items: center; overflow: hidden; isolation: isolate; background: var(--coal); color: var(--paper); }
-.cover-image { position: absolute; z-index: -2; inset: 0; background: url('images/murz-burgundy-desktop.jpg') center 48%/cover no-repeat; filter: brightness(.62) saturate(.84) sepia(.1); }
-.cover-overlay { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #34251bc2 0%, #34251b80 42%, #49331d30 78%, #49331d24 100%), linear-gradient(0deg, #2b2018a1 0%, transparent 38%, #39271938 100%); }
+.cover-image { position: absolute; z-index: -2; inset: 0; background: url('images/murz-burgundy-desktop.jpg') center 48%/cover no-repeat; filter: brightness(.72) saturate(.86) sepia(.08); }
+.cover-overlay { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #34251b9e 0%, #34251b5c 42%, #49331d24 78%, #49331d1a 100%), linear-gradient(0deg, #2b20187a 0%, transparent 38%, #3927192e 100%); }
 .cover-content { width: min(1140px, 85vw); padding: clamp(75px, 11vh, 130px) 0 115px clamp(28px, 9.3vw, 150px); }
 .cover-kicker { display: flex; align-items: center; gap: 13px; margin: 0; color: #e2d7cb; font-size: 9px; letter-spacing: .19em; }
 .cover-kicker span { width: 35px; height: 1px; background: #c89c83; }
@@ -286,7 +286,7 @@ body.menu-open .menu-panel { opacity: 1; visibility: visible; transform: none; }
   .desktop-nav { display: none; }
   .cover { min-height: max(690px, calc(100svh - 62px)); align-items: flex-start; }
   .cover-image { background-image: url('images/murz-burgundy-mobile.jpg'); background-position: center; background-size: cover; }
-  .cover-overlay { background: linear-gradient(90deg, #34251bc2 0%, #34251b80 68%, #49331d50 100%), linear-gradient(0deg, #2b2018a1 0%, transparent 42%); }
+  .cover-overlay { background: linear-gradient(90deg, #34251b9e 0%, #34251b62 68%, #49331d3b 100%), linear-gradient(0deg, #2b20187a 0%, transparent 42%); }
   .cover-content { width: 100%; padding: 92px 23px 105px; }
   .cover-kicker { font-size: 7px; letter-spacing: .13em; }
   .cover h1 { margin-top: 68px; }
@@ -429,6 +429,18 @@ body.menu-open .menu-trigger { background: transparent; }
   transform: translate(-50%, -50%);
 }
 .cover-logo img { width: 100%; height: auto; object-fit: contain; }
+.cover-tagline {
+  position: absolute;
+  top: calc(50% + 154px);
+  left: 50%;
+  width: min(720px, 76vw);
+  margin: 0;
+  transform: translateX(-50%);
+  color: #f1e9e2;
+  font: 400 clamp(14px, 1.2vw, 19px)/1.45 'Playfair Display', Georgia, serif;
+  letter-spacing: .06em;
+  text-align: center;
+}
 .cover-location {
   position: absolute;
   display: flex;
@@ -451,6 +463,7 @@ body.menu-open .menu-trigger { background: transparent; }
   .cover { min-height: 100svh; align-items: center; }
   .cover-content { width: 100%; padding: 0; }
   .cover h1.cover-logo { position: relative; top: auto; left: 50%; width: min(148vw, 840px); max-width: none; margin: 0; transform: translateX(-50%); }
+  .cover-tagline { top: calc(50% + 78px); width: min(86vw, 420px); font-size: clamp(11px, 3.3vw, 14px); line-height: 1.5; letter-spacing: .035em; }
   .cover-location { right: 22px; bottom: max(28px, env(safe-area-inset-bottom)); gap: 8px; font-size: 7px; }
   .cover-location::before { width: 20px; }
 }
@@ -460,7 +473,7 @@ body.menu-open .menu-trigger { background: transparent; }
 
 .cover-content { padding-top: 0; padding-bottom: 0; }
 
-/* Use the supplied MURZ menu marks for the idle and hover states. */
+/* Minimal black-and-gold menu mark. */
 .menu-trigger {
   position: fixed;
   top: 14px;
@@ -468,36 +481,50 @@ body.menu-open .menu-trigger { background: transparent; }
   width: 64px;
   height: 64px;
   margin: 0;
+  display: grid;
+  place-content: center;
+  gap: 7px;
   padding: 0;
   border: 0;
-  border-radius: 50%;
-  background-color: transparent;
-  background-image: url('images/murz-menu-default.svg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  border-radius: 0;
+  background: #080706;
+  box-shadow: 0 10px 28px #00000024;
   backdrop-filter: none;
 }
-.menu-trigger span { display: none; }
+.menu-trigger span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #f0bd77;
+  transition: transform .25s ease, opacity .2s ease;
+}
 .menu-trigger:hover, .menu-trigger:focus-visible {
   border: 0;
-  background-color: transparent;
-  background-image: url('images/murz-menu-hover.svg');
+  background: #080706;
   outline: none;
 }
+.menu-trigger:hover span:first-child,
+.menu-trigger:focus-visible span:first-child { transform: translateY(3px); }
+.menu-trigger:hover span:last-child,
+.menu-trigger:focus-visible span:last-child { transform: translateY(-3px); }
 .menu-trigger:focus-visible { outline: 2px solid #f2d9aa; outline-offset: 3px; }
 body.menu-open .menu-trigger,
 body.menu-open .menu-trigger:hover {
-  background-image: none;
-  background-color: transparent;
+  background: #080706;
 }
+body.menu-open .menu-trigger span { opacity: 0; }
 body.menu-open .menu-trigger::after {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
   content: '×';
   color: #f2d9aa;
   font: 300 38px/1 'DM Sans', sans-serif;
 }
 @media (max-width: 700px) {
-  .menu-trigger { top: 11px; right: 14px; width: 56px; height: 56px; }
+  .menu-trigger { top: 11px; right: 14px; width: 58px; height: 58px; gap: 6px; }
+  .menu-trigger span { width: 36px; }
 }
 
 /* Editorial philosophy slide with matching desktop and mobile photography. */
@@ -516,11 +543,11 @@ body.menu-open .menu-trigger::after {
 .philosophy::before {
   z-index: -2;
   background: url('images/murz-philosophy-desktop.webp') center / cover no-repeat;
-  filter: brightness(.62) saturate(.84) sepia(.1);
+  filter: brightness(.72) saturate(.86) sepia(.08);
 }
 .philosophy::after {
   z-index: -1;
-  background: linear-gradient(90deg, #34251bec 0%, #34251bb8 38%, #34251b50 75%, #34251b39 100%), linear-gradient(0deg, #2b2018a1 0%, transparent 35%, #39271938 100%);
+  background: linear-gradient(90deg, #34251bb8 0%, #34251b8a 38%, #34251b3d 75%, #34251b2d 100%), linear-gradient(0deg, #2b20187a 0%, transparent 35%, #3927192e 100%);
 }
 .philosophy h2 { margin: 0 0 34px; color: #fffaf4; font-size: clamp(52px, 6.2vw, 82px); line-height: .98; letter-spacing: -.065em; }
 .philosophy-content { display: grid; grid-template-columns: minmax(0, 760px) minmax(250px, 350px); gap: clamp(32px, 4.5vw, 72px); align-items: center; }
@@ -544,7 +571,7 @@ body.menu-open .menu-trigger::after {
 @media (max-width: 760px) {
   .philosophy { padding: 74px 22px 34px; }
   .philosophy::before { background-image: url('images/murz-philosophy-mobile.webp'); background-position: center 45%; }
-  .philosophy::after { background: linear-gradient(90deg, #34251bd9 0%, #34251bb3 68%, #34251b80 100%), linear-gradient(0deg, #2b2018b8 0%, #2b20184d 52%, #39271952 100%); }
+  .philosophy::after { background: linear-gradient(90deg, #34251bb0 0%, #34251b85 68%, #34251b5a 100%), linear-gradient(0deg, #2b20188a 0%, #2b201838 52%, #3927193d 100%); }
   .philosophy h2 { margin-bottom: 24px; font-size: clamp(42px, 10.5vw, 64px); }
   .philosophy-content { grid-template-columns: 1fr; gap: 22px; }
   .philosophy-benefits article { grid-template-columns: 18px 1fr; gap: 10px; padding: 11px 0; }

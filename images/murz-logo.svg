@@ -1,28 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
-  <title id="title">MURZ — ремонт и дизайн</title>
-  <desc id="desc">Бронзовый типографский логотип на прозрачном фоне. В центре MURZ, ниже ремонт и дизайн.</desc>
-  <defs>
-    <linearGradient id="bronze" x1="0" y1="0" x2="0.9" y2="1">
-      <stop offset="0%" stop-color="#75431f"/>
-      <stop offset="18%" stop-color="#c58a4a"/>
-      <stop offset="33%" stop-color="#f3d29a"/>
-      <stop offset="48%" stop-color="#a96b35"/>
-      <stop offset="63%" stop-color="#e2b978"/>
-      <stop offset="79%" stop-color="#8e552a"/>
-      <stop offset="100%" stop-color="#d6a15d"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 40 1200 315" role="img" aria-labelledby="title desc">
+  <title id="title">MURZ</title>
+  <desc id="desc">Логотип MURZ с однотонными буквами цвета #e1c28a на прозрачном фоне.</desc>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,500&amp;display=swap');
-    .bronze { fill: url(#bronze); }
-    .brand { font-family: 'Didot', 'Cormorant Garamond', 'GFS Didot', 'Bodoni MT', 'Bodoni 72', serif; font-size: 190px; letter-spacing: 18px; font-weight: 300; }
-    .tagline { font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', serif; font-size: 39px; letter-spacing: 4px; font-weight: 400; }
+    @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&amp;family=Cormorant+Garamond:wght@300;400&amp;display=swap');
+    .brand { font-family:'Didot','Cormorant Garamond','GFS Didot','Bodoni MT','Bodoni 72',serif; font-size:190px; letter-spacing:18px; font-weight:300; fill:#e1c28a; }
   </style>
-  <text class="brand bronze" x="600" y="255" text-anchor="middle" >MURZ</text>
-  <path d="M300 295.5H900" stroke="#d1a267" stroke-width="1.6"/>
-  <text class="tagline bronze" x="600" y="370" text-anchor="middle">РЕМОНТ <tspan font-style="italic" letter-spacing="1" font-size="42">и</tspan> ДИЗАЙН</text>
+  <text class="brand" x="600" y="255" text-anchor="middle">MURZ</text>
+  <path d="M300 305H900" stroke="#e1c28a" stroke-width="3"/>
 </svg>
-
-
-
-
