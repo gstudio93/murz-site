@@ -6,6 +6,7 @@ const closeMenu = () => {
   body.classList.remove('menu-open');
   menuButton?.setAttribute('aria-expanded', 'false');
   menuButton?.setAttribute('aria-label', 'Открыть меню');
+  menuButton?.blur();
   if (menuPanel) menuPanel.inert = true;
 };
 
@@ -15,6 +16,7 @@ menuButton?.addEventListener('click', () => {
   menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
   body.classList.toggle('menu-open', open);
   if (menuPanel) menuPanel.inert = !open;
+  if (!open) menuButton.blur();
 });
 
 menuPanel?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));

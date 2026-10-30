@@ -503,16 +503,16 @@ body.menu-open .menu-trigger { background: transparent; }
   background: #080706;
   outline: none;
 }
-.menu-trigger:hover span:first-child,
-.menu-trigger:focus-visible span:first-child { transform: translateY(3px); }
-.menu-trigger:hover span:last-child,
-.menu-trigger:focus-visible span:last-child { transform: translateY(-3px); }
+@media (hover: hover) and (pointer: fine) {
+  .menu-trigger:hover span:first-child { transform: translateY(3px); }
+  .menu-trigger:hover span:last-child { transform: translateY(-3px); }
+}
 .menu-trigger:focus-visible { outline: 2px solid #f2d9aa; outline-offset: 3px; }
 body.menu-open .menu-trigger,
 body.menu-open .menu-trigger:hover {
   background: #080706;
 }
-body.menu-open .menu-trigger span { opacity: 0; }
+body.menu-open .menu-trigger span { opacity: 0; transform: none; }
 body.menu-open .menu-trigger::after {
   position: absolute;
   inset: 0;
