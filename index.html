@@ -8,7 +8,7 @@
   <title>MURZ — ремонт и дизайн в Ростове-на-Дону</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="fonts/fonts.css?v=20261030-1">
-  <link rel="stylesheet" href="style.css?v=maison-version-20261030-45">
+  <link rel="stylesheet" href="style.css?v=maison-version-20261031-46">
 </head>
 <body>
   <header class="masthead">
@@ -85,23 +85,69 @@
       </div>
     </section>
 
-    <section class="estimate page-section" id="estimate" data-page="04">
-      <div class="estimate-intro">
-        <p class="estimate-eyebrow">MURZ / ДИЗАЙН И РЕМОНТ</p>
-        <h2>Стоимость<br>дизайна</h2>
-        <p class="estimate-design-price">2 000 <span>₽ / м²</span></p>
-        <div class="estimate-example"><span>ПРИМЕР</span><p>Дом · 100 м²</p><strong>1 700 000 ₽ <small>+ 200 000 ₽ дизайн</small></strong></div>
+    <section class="compact-calc calc-space page-section" id="estimate" data-page="04" aria-labelledby="calc-space-title">
+      <div class="calc-heading">
+        <p class="calc-kicker">04 / КАЛЬКУЛЯТОР</p>
+        <h2 id="calc-space-title">Рассчитайте<br><em>свой ремонт</em></h2>
+        <p>Укажите параметры квартиры. На следующем экране можно изменить состав работ — итог обновится автоматически.</p>
       </div>
-      <div class="estimate-content">
-        <p class="estimate-eyebrow">ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ</p>
-        <h2>Стоимость ремонта квартиры</h2>
-        <p>Выберите площадь: ориентировочная стоимость работ — 15 000 ₽ за м².</p>
-        <label class="area-label" for="area">Площадь квартиры</label>
-        <div class="area-number"><output id="area-output" for="area">100</output><span>М²</span></div>
-        <input id="area" type="range" min="20" max="200" step="1" value="100" aria-label="Площадь квартиры от 20 до 200 квадратных метров">
-        <div class="range-ends"><span>20 м²</span><span>200 м²</span></div>
-        <div class="estimate-total"><span>Предварительно за работы</span><strong id="estimate-total">1 500 000 ₽</strong></div>
-        <p class="estimate-note">Расчёт предварительный. Пример для дома приведён отдельно.</p>
+      <div class="compact-calc-layout">
+        <div class="calc-parameters">
+          <div class="calc-area-control">
+            <div class="calc-area-head"><label for="calc-area">Площадь квартиры</label><div><output id="calc-area-output" for="calc-area">60</output><span>м²</span></div></div>
+            <input id="calc-area" type="range" min="15" max="200" step="1" value="60">
+            <div class="calc-range-labels"><span>15 м²</span><span>200 м²</span></div>
+          </div>
+          <div class="calc-field-grid">
+            <label><span>Всего помещений</span><input id="calc-rooms" type="number" min="3" max="15" step="1" value="5" inputmode="numeric"></label>
+            <label><span>Санузлов</span><select id="calc-bathrooms"><option value="0">0</option><option value="1" selected>1</option><option value="2">2</option></select></label>
+            <label><span>Высота потолков, м</span><input id="calc-height" type="number" min="2.3" max="3.7" step="0.1" value="2.7" inputmode="decimal"></label>
+          </div>
+          <label class="calc-design-toggle"><input id="calc-design" type="checkbox"><span><strong>Добавить дизайн-проект</strong><small>Полный проект — 2 000 ₽/м²</small></span></label>
+        </div>
+        <aside class="calc-result-card" aria-live="polite">
+          <span class="calc-result-eyebrow">ВАШ ОРИЕНТИР</span>
+          <h3>Предварительная стоимость</h3>
+          <strong class="calc-result-total" data-calc-total>—</strong>
+          <dl class="calc-result-rows">
+            <div><dt>Работы</dt><dd data-calc-work>—</dd></div>
+            <div><dt>Черновые материалы</dt><dd data-calc-materials>—</dd></div>
+            <div><dt>Дизайн-проект</dt><dd data-calc-design-price>—</dd></div>
+          </dl>
+          <p data-calc-summary>60 м² · 5 помещений · 1 санузел</p>
+          <a class="calc-next-link" href="#estimate-options">Выбрать состав работ <span aria-hidden="true">↓</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="compact-calc calc-options page-section" id="estimate-options" data-page="04.2" aria-labelledby="calc-options-title">
+      <div class="calc-heading calc-options-heading">
+        <p class="calc-kicker">СОСТАВ РАБОТ</p>
+        <h2 id="calc-options-title">Настройте<br><em>будущий ремонт</em></h2>
+        <p>Выберите основные решения. Расчёт использует приблизительные площади поверхностей и уточняется после замера.</p>
+      </div>
+      <div class="compact-calc-layout calc-options-layout">
+        <div class="calc-option-grid">
+          <article class="calc-option-card"><span>01 / ПОТОЛОК</span><h3>Потолок</h3><label>Вариант<select id="calc-ceiling"><option value="stretch" selected>Натяжной</option><option value="painted">Гипсокартон под покраску</option><option value="none">Без работ</option></select></label></article>
+          <article class="calc-option-card"><span>02 / СТЕНЫ</span><h3>Стены</h3><label>Подготовка<select id="calc-wall-level"><option value="full" selected>Полное выравнивание</option><option value="local">Локальное выравнивание</option><option value="none">Не требуется</option></select></label><label>Финиш<select id="calc-wall-finish"><option value="paint" selected>Покраска</option><option value="wallpaper">Обои</option><option value="paintable">Обои под покраску</option><option value="none">Без отделки</option></select></label><label>Стены санузла<select id="calc-wall-tile"><option value="standard" selected>Плитка обычного формата</option><option value="large">Крупный формат</option><option value="none">Без плитки</option></select></label></article>
+          <article class="calc-option-card"><span>03 / ПОЛ</span><h3>Пол</h3><label>Жилые помещения<select id="calc-floor-finish"><option value="laminate" selected>Ламинат / кварцвинил</option><option value="vinyl">Клеевая плитка ПВХ</option><option value="parquet">Паркетная доска</option><option value="none">Без покрытия</option></select></label><label>Пол санузла<select id="calc-floor-tile"><option value="standard" selected>Плитка обычного формата</option><option value="large">Крупный формат</option><option value="none">Без плитки</option></select></label><label class="calc-card-check"><input id="calc-screed" type="checkbox" checked><span>Стяжка пола до 6 см</span></label></article>
+          <article class="calc-option-card"><span>04 / ЭЛЕКТРИКА</span><h3>Электрика</h3><label>Объём работ<select id="calc-electric"><option value="partial">Частичные изменения</option><option value="expanded">Расширение сети</option><option value="new" selected>Полная замена</option><option value="none">Без работ</option></select></label></article>
+          <article class="calc-option-card"><span>05 / САНТЕХНИКА</span><h3>Сантехника</h3><label>Объём работ<select id="calc-plumbing"><option value="both" selected>Разводка и оборудование</option><option value="pipes">Только разводка</option><option value="equipment">Только оборудование</option><option value="none">Без работ</option></select></label></article>
+        </div>
+        <aside class="calc-result-card calc-result-detailed" aria-live="polite">
+          <span class="calc-result-eyebrow">ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ</span>
+          <h3>Стоимость выбранных работ</h3>
+          <strong class="calc-result-total" data-calc-total>—</strong>
+          <dl class="calc-breakdown" data-calc-breakdown></dl>
+          <dl class="calc-result-rows">
+            <div><dt>Работы</dt><dd data-calc-work>—</dd></div>
+            <div><dt>Черновые материалы</dt><dd data-calc-materials>—</dd></div>
+            <div><dt>Дизайн-проект</dt><dd data-calc-design-price>—</dd></div>
+          </dl>
+          <p data-calc-summary>60 м² · 5 помещений · 1 санузел</p>
+          <p class="calc-disclaimer">Сумма предварительная. Чистовые материалы, мебель и техника не учтены.</p>
+          <a class="calc-discuss-link" href="tel:+79284113121">Обсудить расчёт <span aria-hidden="true">↗</span></a>
+        </aside>
       </div>
     </section>
 
@@ -212,6 +258,6 @@
     </div>
     <div class="footer-bottom"><span>© MURZ · 2026</span><span>Ремонт и дизайн · Ростов-на-Дону</span><a href="#top">НАВЕРХ ↑</a></div>
   </footer>
-  <script src="site.js?v=maison-version-20261030-4" defer></script>
+  <script src="site.js?v=maison-version-20261031-5" defer></script>
 </body>
 </html>
