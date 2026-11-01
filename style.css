@@ -120,6 +120,11 @@ body.menu-open .menu-panel { opacity: 1; visibility: visible; transform: none; }
 .portfolio-card:hover .portfolio-photo img { transform: scale(1.035); }
 .portfolio-photo::after { position: absolute; inset: 40% 0 0; background: linear-gradient(transparent, #18151386); content: ''; }
 .portfolio-photo > span { position: absolute; z-index: 1; bottom: 15px; left: 16px; color: #fff8f1; font-size: 8px; letter-spacing: .13em; }
+#portfolio-rooms .portfolio-reel { padding-bottom: 0; scrollbar-width: none; }
+#portfolio-rooms .portfolio-reel::-webkit-scrollbar { display: none; }
+#portfolio-rooms .portfolio-photo { height: clamp(360px, 42vw, 600px); background: #1b1816; }
+#portfolio-rooms .portfolio-photo img { object-fit: contain; }
+#portfolio-rooms .portfolio-photo::after { display: none; }
 .portfolio-caption { display: flex; align-items: end; justify-content: space-between; gap: 14px; padding-top: 19px; }
 .portfolio-caption > div > span { color: #c4a08a; font-size: 8px; letter-spacing: .11em; }
 .portfolio-caption h4 { margin: 7px 0 0; font: 400 23px/1.15 var(--serif); }
