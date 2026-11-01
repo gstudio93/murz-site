@@ -58,12 +58,12 @@ if (calcRoot) {
   };
 
   const rates = {
-    ceiling: { stretch: 1500, painted: 3900, none: 0 },
+    ceiling: { stretch: 450, painted: 3900, none: 0 },
     wallLevel: { full: 1160, corners: 550, perimeter: 250 },
-    wallFinish: { paint: 2530, wallpaper: 1160, paintable: 1610, none: 0 },
-    wallTile: { standard: 3700, large: 4100, none: 0 },
-    floorFinish: { laminate: 1220, vinyl: 1720, parquet: 4500, none: 0 },
-    floorTile: { standard: 3000, large: 3600, none: 0 },
+    wallFinish: { paint: 500, wallpaper: 500, paintable: 1000, none: 0 },
+    wallTile: { standard: 2000, large: 2000, none: 0 },
+    floorFinish: { laminate: 450, vinyl: 1720, parquet: 4500, none: 0 },
+    floorTile: { standard: 2000, large: 2000, none: 0 },
     electric: { partial: 900, expanded: 1250, new: 1750, none: 0 },
     plumbing: { pipes: [0, 37600, 47000], equipment: [0, 26000, 32000] },
     screed: 800,
@@ -157,6 +157,8 @@ if (calcRoot) {
   updateCalculator();
 
   const calculatorFlow = document.querySelector('.calculator-flow');
+  const workPrices = document.querySelector('#work-prices');
+  if (calculatorFlow && workPrices) workPrices.insertAdjacentElement('afterend', calculatorFlow);
   const mobileBar = document.querySelector('.calc-mobile-bar');
   const mobileSummary = document.querySelector('.calc-mobile-summary');
   let mobileBarFrame = 0;
