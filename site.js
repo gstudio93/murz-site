@@ -145,5 +145,33 @@ if (calcRoot) {
     field.addEventListener('change', updateCalculator);
   });
   updateCalculator();
+
+  const calculatorFlow = document.querySelector('.calculator-flow');
+  const mobileBar = document.querySelector('.calc-mobile-bar');
+  const mobileSummary = document.querySelector('.calc-mobile-summary');
+  let mobileBarFrame = 0;
+
+  const syncMobileCalculator = () => {
+    mobileBarFrame = 0;
+    if (!calculatorFlow || !mobileBar || !mobileSummary) return;
+    const flowRect = calculatorFlow.getBoundingClientRect();
+    const summaryRect = mobileSummary.getBoundingClientRect();
+    const isMobile = window.matchMedia('(max-width: 820px)').matches;
+    const insideCalculator = flowRect.top < window.innerHeight && flowRect.bottom > 0;
+    const summaryReached = summaryRect.top <= window.innerHeight - 8;
+    const showBar = isMobile && insideCalculator && !summaryReached;
+    mobileBar.classList.toggle('is-visible', showBar);
+    mobileBar.setAttribute('aria-hidden', String(!showBar));
+    mobileSummary.classList.toggle('is-reached', isMobile && summaryReached);
+  };
+
+  const requestMobileCalculatorSync = () => {
+    if (!mobileBarFrame) mobileBarFrame = requestAnimationFrame(syncMobileCalculator);
+  };
+
+  mobileBar?.addEventListener('click', () => mobileSummary?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  window.addEventListener('scroll', requestMobileCalculatorSync, { passive: true });
+  window.addEventListener('resize', requestMobileCalculatorSync);
+  syncMobileCalculator();
 }
 

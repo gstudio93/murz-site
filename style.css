@@ -619,7 +619,20 @@ html { scroll-padding-top: 0; }
 .calc-option-card label { display: grid; gap: 8px; color: #bdb0a8; font-size: 9px; letter-spacing: .03em; }
 .compact-calc input[type='number'],
 .compact-calc select { width: 100%; height: 48px; padding: 0 14px; border: 1px solid #b9987a5c; border-radius: 0; color: #f3ebe5; background: #1f1b1a; font: 400 11px/1.2 'Manrope', sans-serif; outline: none; }
-.compact-calc select { padding-right: 34px; color-scheme: dark; }
+.compact-calc select {
+  padding-right: 42px;
+  appearance: none;
+  -webkit-appearance: none;
+  color-scheme: dark;
+  background-color: #1f1b1a;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1.25 5 5 5-5' fill='none' stroke='%23d9ad7d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px 8px;
+  cursor: pointer;
+}
+.compact-calc select::-ms-expand { display: none; }
+.compact-calc select option { color: #f3ebe5; background: #1f1b1a; }
 .compact-calc input[type='number']:focus,
 .compact-calc select:focus { border-color: #d0a16f; box-shadow: 0 0 0 1px #d0a16f; }
 .calc-design-toggle { display: flex; align-items: center; gap: 13px; width: fit-content; cursor: pointer; }
@@ -694,4 +707,80 @@ html { scroll-padding-top: 0; }
   .calc-option-card { padding: 19px 17px; }
   .calc-result-card { min-height: 410px; padding: 27px 21px; }
   .calc-result-total { font-size: clamp(34px, 11vw, 46px); }
+}
+
+/* The estimate follows both calculator screens on desktop. */
+.calculator-flow {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: linear-gradient(145deg, #1f1b19 0%, #261e1c 58%, #211918 100%);
+}
+.calculator-panels { min-width: 0; flex: 1 1 auto; }
+.calculator-flow .compact-calc { padding-right: clamp(24px, 3vw, 52px); }
+.calculator-flow .compact-calc-layout,
+.calculator-flow .calc-options-layout { display: block; }
+.calc-desktop-summary {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  width: clamp(330px, 27vw, 410px);
+  height: calc(100svh - 48px);
+  min-height: 0;
+  max-height: 760px;
+  flex: 0 0 clamp(330px, 27vw, 410px);
+  align-self: flex-start;
+  margin: 24px clamp(24px, 4vw, 70px) 24px 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d0a16f55 transparent;
+  z-index: 4;
+}
+.calc-mobile-summary,
+.calc-mobile-bar { display: none; }
+
+@media (max-width: 820px) {
+  .calculator-flow { display: block; }
+  .calculator-flow .compact-calc { padding-right: 22px; }
+  .calc-desktop-summary { display: none; }
+  .calc-mobile-summary {
+    display: flex;
+    margin-top: 24px;
+    opacity: .82;
+    transform: translateY(20px);
+    transition: opacity .3s ease, transform .3s ease;
+  }
+  .calc-mobile-summary.is-reached { opacity: 1; transform: none; }
+  .calc-mobile-bar {
+    position: fixed;
+    z-index: 45;
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    left: 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto 28px;
+    gap: 12px;
+    align-items: center;
+    min-height: 64px;
+    padding: 11px 14px;
+    border: 1px solid #d6aa8e8f;
+    border-radius: 0;
+    color: #f7eee8;
+    background: linear-gradient(120deg, #552b30f5, #3f2326f5);
+    box-shadow: 0 16px 42px #0009;
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    transform: translateY(calc(100% + 24px));
+    pointer-events: none;
+    transition: opacity .25s ease, transform .3s ease;
+  }
+  .calc-mobile-bar.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+  .calc-mobile-bar > span:first-child { font-size: 9px; line-height: 1.35; letter-spacing: .03em; text-align: left; }
+  .calc-mobile-bar strong { color: #f0c89f; font: 400 clamp(20px, 6vw, 27px)/1 'Manrope', sans-serif; letter-spacing: -.055em; white-space: nowrap; }
+  .calc-mobile-bar-arrow { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid #d9ad7d80; color: #d9ad7d; font-size: 16px; }
+}
+
+@media (max-width: 390px) {
+  .calc-mobile-bar { right: 8px; bottom: max(8px, env(safe-area-inset-bottom)); left: 8px; gap: 8px; padding-inline: 11px; }
+  .calc-mobile-bar > span:first-child { max-width: 105px; font-size: 8px; }
 }

@@ -8,7 +8,7 @@
   <title>MURZ — ремонт и дизайн в Ростове-на-Дону</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="fonts/fonts.css?v=20261030-1">
-  <link rel="stylesheet" href="style.css?v=maison-version-20261031-46">
+  <link rel="stylesheet" href="style.css?v=maison-version-20261101-47">
 </head>
 <body>
   <header class="masthead">
@@ -85,6 +85,8 @@
       </div>
     </section>
 
+    <div class="calculator-flow">
+      <div class="calculator-panels">
     <section class="compact-calc calc-space page-section" id="estimate" data-page="04" aria-labelledby="calc-space-title">
       <div class="calc-heading">
         <p class="calc-kicker">04 / КАЛЬКУЛЯТОР</p>
@@ -105,18 +107,6 @@
           </div>
           <label class="calc-design-toggle"><input id="calc-design" type="checkbox"><span><strong>Добавить дизайн-проект</strong><small>Полный проект — 2 000 ₽/м²</small></span></label>
         </div>
-        <aside class="calc-result-card" aria-live="polite">
-          <span class="calc-result-eyebrow">ВАШ ОРИЕНТИР</span>
-          <h3>Предварительная стоимость</h3>
-          <strong class="calc-result-total" data-calc-total>—</strong>
-          <dl class="calc-result-rows">
-            <div><dt>Работы</dt><dd data-calc-work>—</dd></div>
-            <div><dt>Черновые материалы</dt><dd data-calc-materials>—</dd></div>
-            <div><dt>Дизайн-проект</dt><dd data-calc-design-price>—</dd></div>
-          </dl>
-          <p data-calc-summary>60 м² · 5 помещений · 1 санузел</p>
-          <a class="calc-next-link" href="#estimate-options">Выбрать состав работ <span aria-hidden="true">↓</span></a>
-        </aside>
       </div>
     </section>
 
@@ -134,7 +124,7 @@
           <article class="calc-option-card"><span>04 / ЭЛЕКТРИКА</span><h3>Электрика</h3><label>Объём работ<select id="calc-electric"><option value="partial">Частичные изменения</option><option value="expanded">Расширение сети</option><option value="new" selected>Полная замена</option><option value="none">Без работ</option></select></label></article>
           <article class="calc-option-card"><span>05 / САНТЕХНИКА</span><h3>Сантехника</h3><label>Объём работ<select id="calc-plumbing"><option value="both" selected>Разводка и оборудование</option><option value="pipes">Только разводка</option><option value="equipment">Только оборудование</option><option value="none">Без работ</option></select></label></article>
         </div>
-        <aside class="calc-result-card calc-result-detailed" aria-live="polite">
+        <aside class="calc-result-card calc-result-detailed calc-mobile-summary" id="calc-mobile-summary" aria-live="polite">
           <span class="calc-result-eyebrow">ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ</span>
           <h3>Стоимость выбранных работ</h3>
           <strong class="calc-result-total" data-calc-total>—</strong>
@@ -150,6 +140,29 @@
         </aside>
       </div>
     </section>
+      </div>
+
+      <aside class="calc-result-card calc-result-detailed calc-desktop-summary" aria-live="polite">
+        <span class="calc-result-eyebrow">ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ</span>
+        <h3>Стоимость выбранных работ</h3>
+        <strong class="calc-result-total" data-calc-total>—</strong>
+        <dl class="calc-breakdown" data-calc-breakdown></dl>
+        <dl class="calc-result-rows">
+          <div><dt>Работы</dt><dd data-calc-work>—</dd></div>
+          <div><dt>Черновые материалы</dt><dd data-calc-materials>—</dd></div>
+          <div><dt>Дизайн-проект</dt><dd data-calc-design-price>—</dd></div>
+        </dl>
+        <p data-calc-summary>60 м² · 5 помещений · 1 санузел</p>
+        <p class="calc-disclaimer">Сумма предварительная. Чистовые материалы, мебель и техника не учтены.</p>
+        <a class="calc-discuss-link" href="tel:+79284113121">Обсудить расчёт <span aria-hidden="true">↗</span></a>
+      </aside>
+
+      <button class="calc-mobile-bar" type="button" aria-controls="calc-mobile-summary" aria-hidden="true">
+        <span>Предварительная стоимость</span>
+        <strong data-calc-total>—</strong>
+        <span class="calc-mobile-bar-arrow" aria-hidden="true">↑</span>
+      </button>
+    </div>
 
     <section class="process page-section" id="process" data-page="05">
       <div class="process-heading"><h2>Формат работы<br><em>с нами</em></h2></div>
@@ -258,6 +271,6 @@
     </div>
     <div class="footer-bottom"><span>© MURZ · 2026</span><span>Ремонт и дизайн · Ростов-на-Дону</span><a href="#top">НАВЕРХ ↑</a></div>
   </footer>
-  <script src="site.js?v=maison-version-20261031-5" defer></script>
+  <script src="site.js?v=maison-version-20261101-6" defer></script>
 </body>
 </html>
