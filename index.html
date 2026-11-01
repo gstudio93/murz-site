@@ -8,7 +8,7 @@
   <title>MURZ — ремонт и дизайн в Ростове-на-Дону</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="fonts/fonts.css?v=20261030-1">
-  <link rel="stylesheet" href="style.css?v=maison-version-20261101-47">
+  <link rel="stylesheet" href="style.css?v=maison-version-20261101-48">
 </head>
 <body>
   <header class="masthead">
@@ -101,9 +101,9 @@
             <div class="calc-range-labels"><span>15 м²</span><span>200 м²</span></div>
           </div>
           <div class="calc-field-grid">
-            <label><span>Всего помещений</span><input id="calc-rooms" type="number" min="3" max="15" step="1" value="5" inputmode="numeric"></label>
+            <div class="calc-field"><label for="calc-rooms">Всего помещений</label><div class="calc-number-control"><input id="calc-rooms" type="number" min="3" max="15" step="1" value="5" inputmode="numeric"><span class="calc-number-buttons"><button class="calc-step-button" type="button" data-step-target="calc-rooms" data-step="up" aria-label="Увеличить количество помещений"></button><button class="calc-step-button" type="button" data-step-target="calc-rooms" data-step="down" aria-label="Уменьшить количество помещений"></button></span></div></div>
             <label><span>Санузлов</span><select id="calc-bathrooms"><option value="0">0</option><option value="1" selected>1</option><option value="2">2</option></select></label>
-            <label><span>Высота потолков, м</span><input id="calc-height" type="number" min="2.3" max="3.7" step="0.1" value="2.7" inputmode="decimal"></label>
+            <div class="calc-field"><label for="calc-height">Высота потолков, м</label><div class="calc-number-control"><input id="calc-height" type="number" min="2.3" max="3.7" step="0.1" value="2.7" inputmode="decimal"><span class="calc-number-buttons"><button class="calc-step-button" type="button" data-step-target="calc-height" data-step="up" aria-label="Увеличить высоту потолков"></button><button class="calc-step-button" type="button" data-step-target="calc-height" data-step="down" aria-label="Уменьшить высоту потолков"></button></span></div></div>
           </div>
           <label class="calc-design-toggle"><input id="calc-design" type="checkbox"><span><strong>Добавить дизайн-проект</strong><small>Полный проект — 2 000 ₽/м²</small></span></label>
         </div>
@@ -271,6 +271,6 @@
     </div>
     <div class="footer-bottom"><span>© MURZ · 2026</span><span>Ремонт и дизайн · Ростов-на-Дону</span><a href="#top">НАВЕРХ ↑</a></div>
   </footer>
-  <script src="site.js?v=maison-version-20261101-6" defer></script>
+  <script src="site.js?v=maison-version-20261101-7" defer></script>
 </body>
 </html>

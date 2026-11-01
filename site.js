@@ -144,6 +144,16 @@ if (calcRoot) {
     field.addEventListener('input', updateCalculator);
     field.addEventListener('change', updateCalculator);
   });
+  document.querySelectorAll('[data-step-target]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const field = document.getElementById(button.dataset.stepTarget);
+      if (!(field instanceof HTMLInputElement)) return;
+      if (button.dataset.step === 'up') field.stepUp();
+      else field.stepDown();
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+      field.focus({ preventScroll: true });
+    });
+  });
   updateCalculator();
 
   const calculatorFlow = document.querySelector('.calculator-flow');
