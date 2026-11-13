@@ -126,6 +126,9 @@ body.menu-open .menu-panel { opacity: 1; visibility: visible; transform: none; }
 .one-room-gallery .portfolio-photo::after { z-index: 1; inset: 56% 0 0; background: linear-gradient(transparent, #120f0d82); }
 .one-room-gallery .portfolio-photo img { position: relative; z-index: 1; width: auto; max-width: 100%; height: auto; max-height: var(--one-room-photo-height); object-fit: contain; box-shadow: 0 0 42px #08060566; }
 .one-room-gallery .portfolio-photo > span { z-index: 2; bottom: 22px; left: 24px; color: #f3dfcd; }
+.one-room-collage { position: relative; display: grid; height: clamp(300px, 29vw, 420px); grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; padding: 6px; overflow: hidden; background: #151210; border: 1px solid #ffffff14; }
+.one-room-collage img { height: 100%; object-fit: cover; }
+.one-room-collage::after { position: absolute; right: 15px; bottom: 14px; padding: 5px 7px; background: #16110ed9; color: #f3dfcd; content: 'КВАРТИРА · 01'; font-size: 8px; letter-spacing: .13em; }
 .portfolio-caption.one-room-caption { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: clamp(24px, 5vw, 75px); padding-top: 24px; border-top: 1px solid #ffffff24; }
 .gallery-status { display: flex; align-items: center; gap: 11px; align-self: center; color: #d0a78e; font: 400 11px/1 'Manrope', sans-serif; letter-spacing: .12em; }
 .gallery-status i { display: block; width: clamp(38px, 5vw, 78px); height: 1px; background: #ffffff4d; }
@@ -330,6 +333,13 @@ body.menu-open .menu-panel { opacity: 1; visibility: visible; transform: none; }
   .one-room-gallery .portfolio-photo { --one-room-photo-height: clamp(320px, 98vw, 420px); height: var(--one-room-photo-height); min-height: 0; max-height: none; }
   .one-room-gallery .portfolio-photo::after { inset: 56% 0 0; background: linear-gradient(transparent, #1813119c); }
   .one-room-gallery .portfolio-photo > span { bottom: 16px; left: 17px; }
+  .one-room-collage { height: clamp(330px, 102vw, 390px); grid-template-columns: repeat(6, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; }
+  .one-room-collage img:nth-child(1) { grid-column: 1 / span 2; }
+  .one-room-collage img:nth-child(2) { grid-column: 3 / span 2; }
+  .one-room-collage img:nth-child(3) { grid-column: 5 / span 2; }
+  .one-room-collage img:nth-child(4) { grid-column: 2 / span 2; }
+  .one-room-collage img:nth-child(5) { grid-column: 4 / span 2; }
+  .one-room-collage::after { right: 10px; bottom: 9px; font-size: 7px; }
   .portfolio-caption.one-room-caption { display: grid; grid-template-columns: 1fr auto; gap: 18px; padding-top: 18px; }
   .one-room-caption > div:first-child { grid-column: 1 / -1; }
   .gallery-status { align-self: end; }
