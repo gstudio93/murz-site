@@ -28,7 +28,7 @@ document.querySelectorAll('[data-reel]').forEach((button) => {
   button.addEventListener('click', () => {
     const reel = document.getElementById(button.dataset.reel);
     if (!reel) return;
-    const firstCard = reel.querySelector('.portfolio-card, .team-card');
+    const firstCard = reel.querySelector('.portfolio-card');
     const reelGap = Number.parseFloat(getComputedStyle(reel).columnGap) || 0;
     const distance = firstCard ? firstCard.getBoundingClientRect().width + reelGap : reel.clientWidth;
     reel.scrollBy({ left: distance * Number(button.dataset.step), behavior: 'smooth' });
