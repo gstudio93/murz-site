@@ -24,6 +24,29 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeMenu();
 });
 
+const updateReelPosition = (reel) => {
+  const cards = [...reel.querySelectorAll('.portfolio-card')];
+  const output = document.querySelector(`[data-reel-current="${reel.id}"]`);
+  if (!cards.length || !output) return;
+  const reelGap = Number.parseFloat(getComputedStyle(reel).columnGap) || 0;
+  const cardWidth = cards[0].getBoundingClientRect().width + reelGap;
+  const current = Math.min(cards.length, Math.max(1, Math.round(reel.scrollLeft / cardWidth) + 1));
+  output.textContent = String(current).padStart(2, '0');
+};
+
+document.querySelectorAll('.portfolio-reel').forEach((reel) => {
+  let scheduled = false;
+  updateReelPosition(reel);
+  reel.addEventListener('scroll', () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      updateReelPosition(reel);
+      scheduled = false;
+    });
+  }, { passive: true });
+});
+
 document.querySelectorAll('[data-reel]').forEach((button) => {
   button.addEventListener('click', () => {
     const reel = document.getElementById(button.dataset.reel);

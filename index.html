@@ -8,7 +8,7 @@
   <title>MURZ — ремонт и дизайн в Ростове-на-Дону</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="fonts/fonts.css?v=20261030-1">
-  <link rel="stylesheet" href="style.css?v=maison-version-20261113-50">
+  <link rel="stylesheet" href="style.css?v=maison-version-20261113-51">
 </head>
 <body>
   <header class="masthead">
@@ -69,10 +69,19 @@
     </section>
 
     <section class="portfolio page-section" id="portfolio" data-page="02">
-      <div class="portfolio-heading portfolio-title"><h2>Стоимость наших работ</h2><div class="reel-tools"><button type="button" data-reel="one-room" data-step="-1" aria-label="Предыдущий вариант">←</button><button type="button" data-reel="one-room" data-step="1" aria-label="Следующий вариант">→</button></div></div>
-      <div class="portfolio-reel" id="one-room" tabindex="0" aria-label="Варианты стоимости ремонта однокомнатной квартиры">
-        <article class="portfolio-card"><div class="portfolio-photo portfolio-placeholder" role="img" aria-label="Фото 1"><span>Фото 1</span></div><div class="portfolio-caption"><div><span>БЮДЖЕТ · 15 000–20 000 ₽/м²</span><h4>Однокомнатная · 28 м²</h4></div><strong>490 000 ₽</strong></div></article>
-        <article class="portfolio-card"><div class="portfolio-photo portfolio-placeholder" role="img" aria-label="Фото 2"><span>Фото 2</span></div><div class="portfolio-caption"><div><span>БЮДЖЕТ · 20 000–25 000 ₽/м²</span><h4>Однокомнатная · 28 м²</h4></div><strong>650 000 ₽</strong></div></article>
+      <div class="portfolio-heading portfolio-title"><h2>Стоимость наших работ</h2><div class="reel-tools"><button type="button" data-reel="one-room" data-step="-1" aria-label="Предыдущее фото квартиры">←</button><button type="button" data-reel="one-room" data-step="1" aria-label="Следующее фото квартиры">→</button></div></div>
+      <div class="portfolio-reel one-room-gallery" id="one-room" tabindex="0" aria-label="Фотографии ремонта однокомнатной квартиры">
+        <article class="portfolio-card one-room-photo-card"><div class="portfolio-photo" style="--gallery-image: url('images/one-room-01-kitchen.webp')"><img src="images/one-room-01-kitchen.webp" alt="Кухня после ремонта в однокомнатной квартире" width="1600" height="2844" loading="eager" fetchpriority="high" decoding="async"><span>КУХНЯ · 01</span></div></article>
+        <article class="portfolio-card one-room-photo-card"><div class="portfolio-photo" style="--gallery-image: url('images/one-room-02-arch.webp')"><img src="images/one-room-02-arch.webp" alt="Арочный проём и коридор после ремонта" width="1600" height="2844" loading="lazy" decoding="async"><span>КОРИДОР · 02</span></div></article>
+        <article class="portfolio-card one-room-photo-card"><div class="portfolio-photo" style="--gallery-image: url('images/one-room-03-hall.webp')"><img src="images/one-room-03-hall.webp" alt="Прихожая после ремонта" width="1500" height="2000" loading="lazy" decoding="async"><span>ПРИХОЖАЯ · 03</span></div></article>
+        <article class="portfolio-card one-room-photo-card"><div class="portfolio-photo" style="--gallery-image: url('images/one-room-04-bathroom.webp')"><img src="images/one-room-04-bathroom.webp" alt="Ванная комната после ремонта" width="1600" height="900" loading="lazy" decoding="async"><span>ВАННАЯ · 04</span></div></article>
+        <article class="portfolio-card one-room-photo-card"><div class="portfolio-photo" style="--gallery-image: url('images/one-room-05-room.webp')"><img src="images/one-room-05-room.webp" alt="Жилая комната после ремонта" width="1600" height="2844" loading="lazy" decoding="async"><span>КОМНАТА · 05</span></div></article>
+        <article class="portfolio-card one-room-photo-card"><div class="portfolio-photo" style="--gallery-image: url('images/one-room-06-bedroom.webp')"><img src="images/one-room-06-bedroom.webp" alt="Спальня после ремонта" width="800" height="1422" loading="lazy" decoding="async"><span>СПАЛЬНЯ · 06</span></div></article>
+      </div>
+      <div class="portfolio-caption one-room-caption">
+        <div><span>БЮДЖЕТ · 15 000–20 000 ₽/м²</span><h4>Однокомнатная · 28 м²</h4></div>
+        <div class="gallery-status" aria-live="polite"><span data-reel-current="one-room">01</span><i></i><span>06</span></div>
+        <div class="one-room-price"><small>СТОИМОСТЬ РАБОТ</small><strong>490 000 ₽</strong></div>
       </div>
     </section>
 
@@ -249,6 +258,6 @@
     </div>
     <div class="footer-bottom"><span>© MURZ · 2026</span><span>Ремонт и дизайн · Ростов-на-Дону</span><a href="#top">НАВЕРХ ↑</a></div>
   </footer>
-  <script src="site.js?v=maison-version-20261113-10" defer></script>
+  <script src="site.js?v=maison-version-20261113-11" defer></script>
 </body>
 </html>
