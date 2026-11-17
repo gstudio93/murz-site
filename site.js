@@ -3,19 +3,32 @@ const projectRoot = document.querySelector('#projects');
 const projectGallery = document.querySelector('#project-gallery');
 const projectLightbox = document.querySelector('#project-lightbox');
 if (projectRoot && projectGallery && projectLightbox) {
-  const files = ['2264','2265','2266','2269','2271','2273','2274','2276','2277','2278','2279','2283','2284','2285','2286','2293','2294','2343','2344','2345','2346','2347','2348','2350','2352'].map(n => projectRoot.dataset.projectBase + 'IMG_' + n + '.JPG');
+  const projectNumbers = {
+    '83': ['2264','2265','2266','2269','2271','2273','2274','2276','2277','2278','2279','2283','2284','2285','2286','2293','2294','2343','2344','2345','2346','2347','2348','2350','2352'],
+    '73': ['2297','2300','2301','2303','2305','2306','2308','2309','2311','2313','2315','2353','2354','2356','2357','2358','2364','2365','2366','2428','2429','2430','2431','2432']
+  };
+  let files = [];
+  let projectArea = '83';
   const grid = projectGallery.querySelector('.project-grid');
   const image = projectLightbox.querySelector('img');
   const counter = projectLightbox.querySelector('.lightbox-counter');
   let current = 0;
-  const show = index => { current = (index + files.length) % files.length; image.src = files[current]; image.alt = 'Квартира 83 м² — фотография ' + (current + 1); counter.textContent = (current + 1) + ' / ' + files.length; };
-  files.forEach((src, index) => {
+  const show = index => { current = (index + files.length) % files.length; image.src = files[current]; image.alt = 'Квартира ' + projectArea + ' м² — фотография ' + (current + 1); counter.textContent = (current + 1) + ' / ' + files.length; };
+  const openProject = area => {
+    projectArea = area;
+    files = projectNumbers[area].map(n => projectRoot.dataset.projectBase.replace('project-83/', 'project-' + area + '/') + 'IMG_' + n + '.JPG');
+    projectGallery.querySelector('#project-title').textContent = 'Квартира · ' + area + ' м²';
+    grid.replaceChildren();
+    files.forEach((src, index) => {
     const button = document.createElement('button');
     button.type = 'button'; button.setAttribute('aria-label', 'Открыть фото ' + (index + 1));
     const img = document.createElement('img'); img.src = src; img.alt = ''; img.loading = 'lazy';
     button.append(img); button.addEventListener('click', () => { show(index); projectLightbox.showModal(); }); grid.append(button);
-  });
-  projectRoot.querySelector('.project-card').addEventListener('click', () => projectGallery.showModal());
+    });
+    projectGallery.scrollTop = 0;
+    projectGallery.showModal();
+  };
+  projectRoot.querySelectorAll('.project-card').forEach(card => card.addEventListener('click', () => openProject(card.dataset.project)));
   projectGallery.querySelector('.project-close').addEventListener('click', () => projectGallery.close());
   projectLightbox.querySelector('.lightbox-close').addEventListener('click', () => projectLightbox.close());
   projectLightbox.querySelector('.lightbox-prev').addEventListener('click', () => show(current - 1));
