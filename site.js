@@ -20,6 +20,23 @@ if (projectRoot && projectGallery && projectLightbox) {
   projectLightbox.querySelector('.lightbox-close').addEventListener('click', () => projectLightbox.close());
   projectLightbox.querySelector('.lightbox-prev').addEventListener('click', () => show(current - 1));
   projectLightbox.querySelector('.lightbox-next').addEventListener('click', () => show(current + 1));
+  image.addEventListener('click', () => projectLightbox.close());
+  let touchStart = null;
+  projectLightbox.addEventListener('touchstart', event => {
+    if (event.touches.length !== 1 || event.target.closest('button')) { touchStart = null; return; }
+    touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+  }, { passive: true });
+  projectLightbox.addEventListener('touchend', event => {
+    if (!touchStart || event.changedTouches.length !== 1) return;
+    const dx = event.changedTouches[0].clientX - touchStart.x;
+    const dy = event.changedTouches[0].clientY - touchStart.y;
+    touchStart = null;
+    if (Math.abs(dx) >= 45 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+      event.preventDefault();
+      show(current + (dx < 0 ? 1 : -1));
+    }
+  }, { passive: false });
+  projectLightbox.addEventListener('touchcancel', () => { touchStart = null; });
   projectLightbox.addEventListener('keydown', event => { if (event.key === 'ArrowLeft') show(current - 1); if (event.key === 'ArrowRight') show(current + 1); });
 }
 const menuButton = document.querySelector('.menu-trigger');
