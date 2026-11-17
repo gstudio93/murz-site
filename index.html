@@ -8,7 +8,7 @@
   <title>MURZ — ремонт и дизайн в Ростове-на-Дону</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="fonts/fonts.css?v=20261030-1">
-  <link rel="stylesheet" href="style.css?v=maison-version-20261117-3">
+  <link rel="stylesheet" href="style.css?v=maison-version-20261117-4">
 </head>
 <body>
   <header class="masthead">
@@ -16,7 +16,7 @@
     <span class="masthead-city">РОСТОВ-НА-ДОНУ</span>
     <nav class="desktop-nav" aria-label="Основное меню">
       <a href="#philosophy">Философия</a>
-      <a href="#portfolio">Стоимость</a>
+      <a href="#projects">Портфолио</a>
     </nav>
     <a class="masthead-call" href="tel:+79284113121">+7 (928) 411-31-21</a>
     <button class="menu-trigger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
@@ -27,9 +27,6 @@
       <p class="eyebrow">MURZ / РЕМОНТ И ДИЗАЙН</p>
       <a href="#philosophy"><span>01</span> Почему выбирают MURZ</a>
       <a href="#projects"><span>02</span> Портфолио</a>
-      <a href="#portfolio"><span>03</span> Стоимость · 1-комнатная</a>
-      <a href="#portfolio-two-room"><span>03</span> Стоимость · 2-комнатная</a>
-      <a href="#portfolio-rooms"><span>04</span> Ремонт отдельных комнат</a>
       <a href="#process"><span>05</span> Как проходит работа</a>
       <a href="#work-prices"><span>06</span> Цены по смете</a>
       <a href="#estimate"><span>07</span> Калькулятор стоимости</a>
@@ -72,11 +69,12 @@
     <section class="projects page-section" id="projects" data-project-base="images/project-83/">
       <div class="projects-heading"><span>НАШИ РАБОТЫ</span><h2>Портфолио</h2><p>Пространства, которые обретают новую жизнь.</p></div>
       <div class="project-cards"><button class="project-card" type="button" data-project="83" aria-haspopup="dialog" aria-controls="project-gallery"><img src="images/project-83/IMG_2264.JPG" alt="" loading="lazy"><span class="project-card-caption"><span>РЕМОНТ КВАРТИРЫ</span><strong>Квартира · 83 м²</strong><small>СМОТРЕТЬ ПРОЕКТ ↗</small></span></button>
-      <button class="project-card" type="button" data-project="73" aria-haspopup="dialog" aria-controls="project-gallery"><img src="images/project-73/IMG_2297.JPG" alt="" loading="lazy"><span class="project-card-caption"><span>РЕМОНТ КВАРТИРЫ</span><strong>Квартира · 73 м²</strong><small>СМОТРЕТЬ ПРОЕКТ ↗</small></span></button></div>
+      <button class="project-card" type="button" data-project="73" aria-haspopup="dialog" aria-controls="project-gallery"><img src="images/project-73/IMG_2297.JPG" alt="" loading="lazy"><span class="project-card-caption"><span>РЕМОНТ КВАРТИРЫ</span><strong>Квартира · 73 м²</strong><small>СМОТРЕТЬ ПРОЕКТ ↗</small></span></button>
+      <button class="project-card" type="button" data-project="48" aria-haspopup="dialog" aria-controls="project-gallery"><img src="images/project-48/IMG_2120.JPG" alt="" loading="lazy"><span class="project-card-caption"><span>РЕМОНТ КВАРТИРЫ</span><strong>Квартира · 48 м²</strong><small>СМОТРЕТЬ ПРОЕКТ ↗</small></span></button></div>
     </section>
     <dialog class="project-dialog" id="project-gallery" aria-labelledby="project-title"><div class="project-dialog-head"><div><span>ПОРТФОЛИО MURZ</span><h2 id="project-title">Квартира · 83 м²</h2></div><button type="button" class="project-close" aria-label="Закрыть галерею">×</button></div><div class="project-grid"></div></dialog>
     <dialog class="project-lightbox" id="project-lightbox" aria-label="Просмотр фотографии"><button type="button" class="lightbox-close" aria-label="Закрыть просмотр">×</button><button type="button" class="lightbox-prev" aria-label="Предыдущее фото">←</button><img alt=""><button type="button" class="lightbox-next" aria-label="Следующее фото">→</button><span class="lightbox-counter" aria-live="polite"></span></dialog>
-    <section class="portfolio page-section" id="portfolio" data-page="02">
+    <section class="portfolio page-section" id="portfolio" data-page="02" hidden>
       <div class="portfolio-heading portfolio-title"><h2>Стоимость наших работ</h2><div class="reel-tools"><button type="button" data-reel="one-room" data-step="-1" aria-label="Предыдущее фото квартиры">←</button><button type="button" data-reel="one-room" data-step="1" aria-label="Следующее фото квартиры">→</button></div></div>
       <div class="portfolio-reel one-room-gallery" id="one-room" tabindex="0" aria-label="Фотографии ремонта однокомнатной квартиры">
         <article class="portfolio-card one-room-collage-card"><div class="one-room-collage" role="img" aria-label="Коллаж помещений однокомнатной квартиры после ремонта"><img src="images/one-room-01-kitchen.webp" alt="Кухня после ремонта" width="1600" height="2844" loading="eager" fetchpriority="high" decoding="async"><img src="images/one-room-02-arch.webp" alt="Арочный проём и коридор после ремонта" width="1600" height="2844" loading="lazy" decoding="async"><img src="images/one-room-05-room.webp" alt="Жилая комната после ремонта" width="1600" height="2844" loading="lazy" decoding="async"><img src="images/one-room-06-bedroom.webp" alt="Спальня после ремонта" width="800" height="1422" loading="lazy" decoding="async"></div></article>
@@ -89,7 +87,7 @@
       </div>
     </section>
 
-    <section class="portfolio page-section" id="portfolio-one-room-premium" aria-label="Второй вариант однокомнатной квартиры">
+    <section class="portfolio page-section" id="portfolio-one-room-premium" aria-label="Второй вариант однокомнатной квартиры" hidden>
       <div class="portfolio-heading portfolio-title portfolio-controls"><div class="reel-tools"><button type="button" data-reel="one-room-premium" data-step="-1" aria-label="Предыдущее фото второй квартиры">←</button><button type="button" data-reel="one-room-premium" data-step="1" aria-label="Следующее фото второй квартиры">→</button></div></div>
       <div class="portfolio-reel one-room-gallery" id="one-room-premium" tabindex="0" aria-label="Фотографии второго варианта однокомнатной квартиры">
         <article class="portfolio-card"><div class="one-room-collage"><img src="images/gf-4CGW-MGQd-cYcm_aranzacja-kawalerki-17-j.jpg" alt="Обеденная зона" loading="lazy"><img src="images/gf-8KtM-4mXh-QAnU_metamorfoza-kawalerki-zdjecia-po-remoncie-17-j.jpg" alt="Гостиная" loading="lazy"><img src="images/gf-8Pcc-j1H2-i1Qb_sypialnia-w-kawalerce-17-j.jpg" alt="Спальня" loading="lazy"><img src="images/gf-DZQt-jGPC-B99W_kawalerka-przedpokoj-17-j.jpg" alt="Прихожая" loading="lazy"></div></article>
@@ -98,7 +96,7 @@
       <div class="portfolio-caption one-room-caption"><div><span>БЮДЖЕТ · 20 000–25 000 ₽/м²</span><h4>Однокомнатная · 28 м²</h4></div><div class="gallery-status" aria-live="polite"><span data-reel-current="one-room-premium">01</span><i></i><span>02</span></div><div class="one-room-price"><small>СТОИМОСТЬ РАБОТ</small><strong>650 000 ₽</strong></div></div>
     </section>
 
-    <section class="portfolio page-section" id="portfolio-two-room" data-page="03">
+    <section class="portfolio page-section" id="portfolio-two-room" data-page="03" hidden>
       <div class="portfolio-heading portfolio-title portfolio-controls"><div class="reel-tools"><button type="button" data-reel="two-room" data-step="-1" aria-label="Предыдущий вариант">←</button><button type="button" data-reel="two-room" data-step="1" aria-label="Следующий вариант">→</button></div></div>
       <div class="portfolio-reel" id="two-room" tabindex="0" aria-label="Варианты стоимости ремонта двухкомнатной квартиры">
         <article class="portfolio-card"><div class="portfolio-photo portfolio-placeholder" role="img" aria-label="Фото 3"><span>Фото 3</span></div><div class="portfolio-caption"><div><span>БЮДЖЕТ · 15 000–20 000 ₽/м²</span><h4>Двухкомнатная · 45 м²</h4></div><strong>800 000 ₽</strong></div></article>
@@ -106,7 +104,7 @@
       </div>
     </section>
 
-    <section class="portfolio page-section" id="portfolio-rooms" data-page="04">
+    <section class="portfolio page-section" id="portfolio-rooms" data-page="04" hidden>
       <div class="portfolio-heading portfolio-title"><h2>Ремонт отдельных комнат</h2><div class="reel-tools"><button type="button" data-reel="separate-rooms" data-step="-1" aria-label="Предыдущее помещение">←</button><button type="button" data-reel="separate-rooms" data-step="1" aria-label="Следующее помещение">→</button></div></div>
       <div class="portfolio-reel" id="separate-rooms" tabindex="0" aria-label="Варианты ремонта отдельных помещений">
         <article class="portfolio-card"><div class="portfolio-photo"><img src="images/room-gallery-01.webp" alt="Современная гостиная с мягким диваном" width="1086" height="1086" loading="lazy" decoding="async"></div></article>
@@ -255,8 +253,7 @@
       <span class="footer-heading">РАЗДЕЛЫ</span>
       <div class="footer-links">
         <a href="#philosophy">Почему MURZ</a>
-        <a href="#projects">Портфолио</a><a href="#portfolio">Стоимость ремонта</a>
-        <a href="#portfolio-rooms">Отдельные комнаты</a>
+        <a href="#projects">Портфолио</a>
         <a href="#process">Как мы работаем</a>
         <a href="#work-prices">Цены по смете</a>
         <a href="#estimate">Калькулятор</a>
@@ -271,6 +268,6 @@
     </div>
     <div class="footer-bottom"><span>© MURZ · 2026</span><span>Ремонт и дизайн · Ростов-на-Дону</span><a href="#top">НАВЕРХ ↑</a></div>
   </footer>
-  <script src="site.js?v=maison-version-20261117-3" defer></script>
+  <script src="site.js?v=maison-version-20261117-4" defer></script>
 </body>
 </html>
