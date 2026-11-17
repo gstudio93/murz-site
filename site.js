@@ -8,7 +8,8 @@ if (projectRoot && projectGallery && projectLightbox) {
     '73': ['2297','2300','2301','2303','2305','2306','2308','2309','2311','2313','2315','2353','2354','2356','2357','2358','2364','2365','2366','2428','2429','2430','2431','2432'],
     '48': ['2120','2121','2122','2123','2124','2125','2126','2129','2130','2136','2137'],
     '44': ['2176','2177','2178','2179','2180','2181','2182','2183','2184','2185','2186','2187','2188','2189','2190','2191','2192','2193','2194','2195','2196','2197','2198'],
-    '72': ['2120','2201','2204','2205','2206','2208','2209','2211','2212','2215','2216','2217','2218','2220','2221','2222','2223','2224','2225']
+    '72': ['2120','2201','2204','2205','2206','2208','2209','2211','2212','2215','2216','2217','2218','2220','2221','2222','2223','2224','2225'],
+    '40.9': ['2139','2140','2141','2142','2143','2144','2145','2146','2148','2149','2150','2151']
   };
   let files = [];
   let projectArea = '83';
@@ -16,11 +17,11 @@ if (projectRoot && projectGallery && projectLightbox) {
   const image = projectLightbox.querySelector('img');
   const counter = projectLightbox.querySelector('.lightbox-counter');
   let current = 0;
-  const show = index => { current = (index + files.length) % files.length; image.src = files[current]; image.alt = 'Квартира ' + projectArea + ' м² — фотография ' + (current + 1); counter.textContent = (current + 1) + ' / ' + files.length; };
+  const show = index => { current = (index + files.length) % files.length; image.src = files[current]; image.alt = 'Квартира ' + projectArea.replace('.', ',') + ' м² — фотография ' + (current + 1); counter.textContent = (current + 1) + ' / ' + files.length; };
   const openProject = area => {
     projectArea = area;
     files = projectNumbers[area].map(n => projectRoot.dataset.projectBase.replace('project-83/', 'project-' + area + '/') + 'IMG_' + n + '.JPG');
-    projectGallery.querySelector('#project-title').textContent = 'Квартира · ' + area + ' м²';
+    projectGallery.querySelector('#project-title').textContent = 'Квартира · ' + area.replace('.', ',') + ' м²';
     grid.replaceChildren();
     files.forEach((src, index) => {
     const button = document.createElement('button');
