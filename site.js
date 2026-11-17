@@ -1,4 +1,27 @@
 const body = document.body;
+const projectRoot = document.querySelector('#projects');
+const projectGallery = document.querySelector('#project-gallery');
+const projectLightbox = document.querySelector('#project-lightbox');
+if (projectRoot && projectGallery && projectLightbox) {
+  const files = ['2264','2265','2266','2269','2271','2273','2274','2276','2277','2278','2279','2283','2284','2285','2286','2293','2294','2343','2344','2345','2346','2347','2348','2350','2352'].map(n => projectRoot.dataset.projectBase + 'IMG_' + n + '.JPG');
+  const grid = projectGallery.querySelector('.project-grid');
+  const image = projectLightbox.querySelector('img');
+  const counter = projectLightbox.querySelector('.lightbox-counter');
+  let current = 0;
+  const show = index => { current = (index + files.length) % files.length; image.src = files[current]; image.alt = 'Квартира 83 м² — фотография ' + (current + 1); counter.textContent = (current + 1) + ' / ' + files.length; };
+  files.forEach((src, index) => {
+    const button = document.createElement('button');
+    button.type = 'button'; button.setAttribute('aria-label', 'Открыть фото ' + (index + 1));
+    const img = document.createElement('img'); img.src = src; img.alt = ''; img.loading = 'lazy';
+    button.append(img); button.addEventListener('click', () => { show(index); projectLightbox.showModal(); }); grid.append(button);
+  });
+  projectRoot.querySelector('.project-card').addEventListener('click', () => projectGallery.showModal());
+  projectGallery.querySelector('.project-close').addEventListener('click', () => projectGallery.close());
+  projectLightbox.querySelector('.lightbox-close').addEventListener('click', () => projectLightbox.close());
+  projectLightbox.querySelector('.lightbox-prev').addEventListener('click', () => show(current - 1));
+  projectLightbox.querySelector('.lightbox-next').addEventListener('click', () => show(current + 1));
+  projectLightbox.addEventListener('keydown', event => { if (event.key === 'ArrowLeft') show(current - 1); if (event.key === 'ArrowRight') show(current + 1); });
+}
 const menuButton = document.querySelector('.menu-trigger');
 const menuPanel = document.querySelector('#menu-panel');
 
