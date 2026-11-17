@@ -148,7 +148,7 @@ body.menu-open .menu-panel { opacity: 1; visibility: visible; transform: none; }
 .lightbox-close, .lightbox-prev, .lightbox-next { position: absolute; z-index: 1; }
 .lightbox-close { top: 20px; right: 24px; }.lightbox-prev { left: 20px; top: calc(50% - 24px); }.lightbox-next { right: 20px; top: calc(50% - 24px); }
 .lightbox-counter { position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); color: #e4c58c; font-size: 12px; letter-spacing: .12em; }
-@media (max-width: 760px) { .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; } .project-lightbox { padding: 70px 8px; } .lightbox-prev { left: 8px; } .lightbox-next { right: 8px; } .lightbox-close, .lightbox-prev, .lightbox-next { width: 40px; height: 40px; } }
+@media (max-width: 760px) { .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; } .project-lightbox { padding: 70px 8px; } .lightbox-prev { left: 8px; } .lightbox-next { right: 8px; } .lightbox-close, .lightbox-prev, .lightbox-next { width: 44px; height: 44px; border: 0; background: transparent; text-shadow: 0 1px 5px #000; } }
 .portfolio-photo > span { position: absolute; z-index: 1; bottom: 15px; left: 16px; color: #fff8f1; font-size: 8px; letter-spacing: .13em; }
 .one-room-gallery { gap: 0; padding-bottom: 0; scrollbar-width: none; }
 .one-room-gallery::-webkit-scrollbar { display: none; }
